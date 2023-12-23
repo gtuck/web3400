@@ -26,11 +26,11 @@
 	"customizations": {
 		"vscode": { // Specifies customizations for Visual Studio Code.
 			"extensions": [ // List of VS Code extensions to be installed in the environment.
-				"ms-azuretools.vscode-docker" // Docker extension for VS Code, helpful for managing Docker containers.
+				// "ms-azuretools.vscode-docker" Docker extension for VS Code, helpful for managing Docker containers.
 			]
 		}
 	},
 	
 	// Command to run after the container is created, starts a PHP server on port 80.
-	"postCreateCommand": "php -S localhost:8000"
+	// "postCreateCommand": "php -S localhost:8000"
 }

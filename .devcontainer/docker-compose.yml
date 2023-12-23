@@ -17,7 +17,7 @@ services:
     network_mode: service:db
 
   db:
-    image: mariadb:10.4  # Specifies the MariaDB image to use for the database service.
+    image: mariadb:latest  # Specifies the MariaDB image to use for the database service.
     restart: unless-stopped  # Container restart policy.
     volumes:
       - mariadb-data:/var/lib/mysql  # Persist database data using a named volume.
@@ -30,7 +30,7 @@ services:
   phpmyadmin:
       image: phpmyadmin/phpmyadmin  # Uses the official phpMyAdmin image.
       ports:
-        - 8080:8000  # Maps port 8080 on the host to port 8000 in the container.
+        - 8080:80  # Maps port 80 on the host to port 8000 in the container.
       environment:  # Environment variables for phpMyAdmin configuration.
         - PMA_HOST=db  # Database host.
         - PMA_PORT=3306  # Database port.
