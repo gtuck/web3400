@@ -12,4 +12,4 @@ http://localhost:8000
 
 To access phpMyAdmin, use the following link (User=web3400 Pwd=password):
 
-https://localhost:8001
+https://localhost:8080
