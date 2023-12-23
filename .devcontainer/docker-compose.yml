@@ -30,7 +30,7 @@ services:
   phpmyadmin:
       image: phpmyadmin/phpmyadmin  # Uses the official phpMyAdmin image.
       ports:
-        - 8080:80  # Maps port 80 on the host to port 8000 in the container.
+        - 8080:80  # Maps port 8080 on the host to port 80 in the container.
       environment:  # Environment variables for phpMyAdmin configuration.
         - PMA_HOST=db  # Database host.
         - PMA_PORT=3306  # Database port.
