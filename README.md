@@ -6,7 +6,7 @@ To use this repository, clone it to your local computer, then open the project f
 
 To access your web application, use the following link:
 
-http://localhost
+http://localhost:8000
 
 To access phpMyAdmin, use the following link (User=web3400 Pwd=password):
 

@@ -13,7 +13,7 @@
 	
 	// List of ports to forward from the container to the host machine.
 	"forwardPorts": [
-		80, // HTTP port, used for web traffic.
+		8000, // HTTP port, used for web traffic.
 		3306, // MySQL/MariaDB port, used for database connections.
 		8001 // Custom port, for phpMyAdmin.
 	],
@@ -32,5 +32,5 @@
 	},
 	
 	// Command to run after the container is created, starts a PHP server on port 80.
-	"postCreateCommand": "php -S localhost:80"
+	"postCreateCommand": "php -S localhost:8000"
 }
