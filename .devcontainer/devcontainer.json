@@ -15,7 +15,7 @@
 	"forwardPorts": [
 		8000, // HTTP port, used for web traffic.
 		3306, // MySQL/MariaDB port, used for database connections.
-		8001 // Custom port, for phpMyAdmin.
+		8080 // Custom port, for phpMyAdmin.
 	],
 	
 	// This section is reserved for additional features but is currently empty.
