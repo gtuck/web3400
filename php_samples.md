@@ -85,30 +85,26 @@
    They are closed automatically when the variable is no longer in use.
    ```
 
-### Escape HTML Entities
-    ```php
-    $escapedString = htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
-    ```
-
 ### Working with Strings
-   **Replace Text in a String**
+
+**Replace Text in a String**
    ```php
    $newString = str_replace("oldText", "newText", $string);
    ```
 
-   **Replace Multiple Words in a String**
+**Replace Multiple Words in a String**
    ```php
    $search  = ['word1', 'word2'];
    $replace = ['replace1', 'replace2'];
    $newString = str_replace($search, $replace, $string);
    ```
 
-   **Declare an Array of Strings**
+**Declare an Array of Strings**
    ```php
    $stringArray = ['string1', 'string2', 'string3'];
    ```
 
-   **Check if a String Contains a Specific Word**
+**Check if a String Contains a Specific Word**
    ```php
    if (strpos($string, 'word') !== false) {
        echo "Word found!";
@@ -116,79 +112,80 @@
    ```
 
 ### Working with Arrays
-1. **Creating an Array**
+
+**Creating an Array**
    ```php
    $array = ['item1', 'item2', 'item3'];
    ```
 
-2. **Inserting New Items into an Array**
+**Inserting New Items into an Array**
    ```php
    $array[] = 'newItem';
    ```
 
-3. **Remove Item from an Array**
+**Remove Item from an Array**
    ```php
    unset($array[$key]);
    ```
 
-4. **Reindex Values after Removing an Item**
+**Reindex Values after Removing an Item**
    ```php
    $array = array_values($array);
    ```
 
-5. **Reverse an Array**
+**Reverse an Array**
    ```php
    $reversedArray = array_reverse($array);
    ```
 
-6. **Merge Two or More Arrays**
+**Merge Two or More Arrays**
    ```php
    $mergedArray = array_merge($array1, $array2);
    ```
 
-7. **Return Only the Array Keys**
+**Return Only the Array Keys**
    ```php
    $keys = array_keys($array);
    ```
 
-8. **Sort an Array in Ascending Order**
+**Sort an Array in Ascending Order**
    ```php
    sort($array);
    ```
 
-9. **Sort an Array in Reverse Order**
+**Sort an Array in Reverse Order**
    ```php
    rsort($array);
    ```
 
-10. **Check if an Item Exists in an Array**
-    ```php
+**Check if an Item Exists in an Array**
+   ```php
     if (in_array('item', $array)) {
         echo "Item found!";
     }
-    ```
+   ```
 
-11. **Check if the Key Exists in an Array**
-    ```php
+**Check if the Key Exists in an Array**
+   ```php
     if (array_key_exists('key', $array)) {
         echo "Key exists!";
     }
-    ```
+   ```
 
-12. **Count the Number of Items in an Array**
-    ```php
-    $count = count($array);
-    ```
+**Count the Number of Items in an Array**
+   ```php
+        $count = count($array);
+   ```
 
-13. **Convert Comma-Separated List to Array**
-    ```php
-    $array = explode(',', $commaSeparatedList);
-    ```
+**Convert Comma-Separated List to Array**
+   ```php
+        $array = explode(',', $commaSeparatedList);
+   ```
 
-14. **Convert an Array to a Comma-Separated List**
-    ```php
-    $commaSeparatedList = implode(',', $array);
-    ```
+**Convert an Array to a Comma-Separated List**
+   ```php
+       $commaSeparatedList = implode(',', $array);
+   ```
 
 ### GET and POST Requests
 1. **Retrieve a GET Request Parameter**
