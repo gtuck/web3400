@@ -1,53 +1,60 @@
 # Helpful PHP code samples:
 
 ### Database Connectivity
-1. **Connect to MySQL Database using PDO**
+1. **Use PDO to connect to a database then use a try/catch to test the connection**
    ```php
-   $host = 'localhost';
-   $db   = 'your_database';
-   $user = 'username';
-   $pass = 'password';
-   $charset = 'utf8mb4';
-   ```
+    function pdo_connect_mariadb()
+    {
+        $servername = "localhost";
+        $dbname = "database";
+        $username = "username";
+        $password = "password";
 
-2. **Check and Output Connection Errors**
-   ```php
-   try {
-      $pdo = new PDO($dsn, $user, $pass);
-      echo "Connected successfully";
-   } catch (\PDOException $e) {
-      throw new \PDOException($e->getMessage(), (int)$e->getCode());
-   }
+        try {
+            return new PDO(
+                'mysql:host=' . $servername .
+                    ';dbname=' . $dbname .
+                    ';charset=utf8',
+                $username,
+                $password
+            );
+        } catch (PDOException $exception) {
+            die("PDO failed to connect to the database: $exception");
+        }
+    }
    ```
-3. **Select Database Table and Populate Results**
+3. **Create a PDO databse connection object by calling a function**
+   ```php
+   $pdo = pdo_connect_mariadb();
+   ```
+4. **Select Database Table and Populate Results**
    ```php
    $stmt = $pdo->query('SELECT * FROM table_name');
    while ($row = $stmt->fetch()) {
        echo $row['column_name'] . "\n";
    }
    ```
-
-4. **Retrieve Number of Rows**
+5. **Retrieve Number of Rows**
    ```php
    $stmt = $pdo->query('SELECT * FROM table_name');
    $rowCount = $stmt->rowCount();
    echo $rowCount;
    ```
 
-5. **Insert a New Record**
+6. **Insert a New Record**
    ```php
    $sql = "INSERT INTO table_name (column1, column2) VALUES (?, ?)";
    $stmt= $pdo->prepare($sql);
    $stmt->execute(['value1', 'value2']);
    ```
 
-6. **Retrieve Number of Affected Rows**
+7. **Retrieve Number of Affected Rows**
    ```php
    $affectedRows = $stmt->rowCount();
    echo $affectedRows;
    ```
 
-7. **Close Query and Database Connection**
+8. **Close Query and Database Connection**
    ```txt
    PDO and prepared statements do not require explicit closing. They are closed automatically when the variable is no longer in use.
    ```
