@@ -23,11 +23,14 @@
         }
     }
    ```
-3. **Create a PDO databse connection object by calling a function**
+2. **Create a PDO databse connection object by calling a function**
    ```php
    $pdo = pdo_connect_mariadb();
    ```
-4. **Create (INSERT)**
+
+### Database CRUD operations
+
+**Create (INSERT)**
 ```php
 $sql = "INSERT INTO table_name (column1, column2) VALUES (?, ?)";
 $stmt = $pdo->prepare($sql);
@@ -35,7 +38,7 @@ $stmt->execute(['value1', 'value2']);
 ```
 In this example, `'value1'` and `'value2'` are the values to be inserted into `column1` and `column2` respectively.
 
-5. **Read (SELECT)**
+**Read (SELECT)**
 ```php
 $sql = "SELECT * FROM table_name WHERE column1 = ?";
 $stmt = $pdo->prepare($sql);
@@ -48,7 +51,7 @@ foreach ($results as $row) {
 ```
 Here, `'value1'` is the value used in the WHERE clause to filter results from `table_name`.
 
-6. **Update**
+**Update**
 ```php
 $sql = "UPDATE table_name SET column1 = ? WHERE column2 = ?";
 $stmt = $pdo->prepare($sql);
@@ -56,7 +59,7 @@ $stmt->execute(['newValue1', 'value2']);
 ```
 In this case, `column1` is updated to `'newValue1'` where `column2` equals `'value2'`.
 
-7. **Delete**
+**Delete**
 ```php
 $sql = "DELETE FROM table_name WHERE column1 = ?";
 $stmt = $pdo->prepare($sql);
@@ -64,17 +67,16 @@ $stmt->execute(['value1']);
 ```
 This deletes rows from `table_name` where `column1` equals `'value1'`.
 
-8. **Retrieve Number of Affected Rows**
+**Retrieve Number of Affected Rows**
    ```php
    $affectedRows = $stmt->rowCount();
    echo $affectedRows;
    ```
-9. **Get the ID for the last record inserted**
+**Get the ID for the last record inserted**
    ```php
-   // Get the ID of the last inserted record
     $lastId = $pdo->lastInsertId();
-    ```
-10. **Close Query and Database Connection**
+   ```
+**Close Query and Database Connection**
    ```txt
    PDO and prepared statements do not require explicit closing.
    They are closed automatically when the variable is no longer in use.
