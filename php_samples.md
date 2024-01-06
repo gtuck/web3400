@@ -254,3 +254,41 @@
     // Parse JSON
     $parsedArray = json_decode($json, true);
   ```
+
+### Using the ternary operator
+
+    The ternary operator in PHP is a shorthand for the `if-else` statement. It is used to execute different code based on the evaluation of a condition. The syntax of the ternary operator is:
+
+  ```php
+    condition ? exprIfTrue : exprIfFalse;
+  ```
+
+    Here are three examples of using the ternary operator in PHP:
+
+**Basic Usage**:
+   ```php
+   //In this example, `$isAdult` will be `"Yes"` if `$age` is greater than or equal to 18, and `"No"` otherwise.
+   $age = 20;
+   $isAdult = ($age >= 18) ? "Yes" : "No";
+   echo $isAdult; // Outputs: Yes
+   ```
+
+**Nested Ternary**:
+   ```php
+   //Here, we use a nested ternary operator to determine a grade based on the score. If `$score` is 90 or above, `$grade` is "A". If it's between 80 and 89, `$grade` is "B". Otherwise, it's "C".
+   $score = 85;
+   $grade = ($score >= 90) ? "A" : (($score >= 80) ? "B" : "C");
+   echo $grade; // Outputs: B
+   ```
+
+**Using Ternary with Functions**:
+   ```php
+   //In this example, if `$user` is "Alice", it calls the `greet` function with `$user` as a parameter. If `$user` is not "Alice", it outputs "Unknown user".
+   $user = "Alice";
+   echo ($user === "Alice") ? greet($user) : "Unknown user";
+
+   function greet($name) {
+       return "Hello, " . $name;
+   }
+   // Outputs: Hello, Alice
+   ```
