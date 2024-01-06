@@ -261,7 +261,7 @@
    It is used to execute different code based on the evaluation of a condition.
    The syntax of the ternary operator is:
     
-      **condition ? exprIfTrue : exprIfFalse;**
+      condition ? exprIfTrue : exprIfFalse;
 
 **Basic Usage**:
    ```php
