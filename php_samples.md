@@ -1,5 +1,56 @@
 ## PHP code samples:
 
+### Creating & using variables
+
+Creating and using variables in PHP is a fundamental part of programming in this language. Variables in PHP are used to store data, like strings, integers, arrays, etc., and they start with a `$` sign. Here are three examples that illustrate different ways of creating and using variables in PHP:
+
+**Example 1: Working with Strings**
+
+   ```php
+    /* In this example, a string variable `$name` is created and assigned the value `"John Doe"`
+    It's then concatenated with another string and displayed. */
+
+    // Creating a string variable
+    $name = "John Doe";
+
+    // Using the variable
+    echo "Hello, my name is " . $name;
+    // Outputs: Hello, my name is John Doe
+   ```
+
+**Example 2: Performing Mathematical Operations with Integer Variables**
+
+   ```php
+    /* Here, two integer variables `$number1` and `$number2` are created.
+    A third variable `$sum` is used to store the result of their addition.
+    The result is then displayed.*/
+
+    // Creating integer variables
+    $number1 = 10;
+    $number2 = 20;
+
+    // Performing a mathematical operation
+    $sum = $number1 + $number2;
+
+    // Using the variable
+    echo "The sum of " . $number1 . " and " . $number2 . " is " . $sum;
+    // Outputs: The sum of 10 and 20 is 30
+   ```
+
+**Example 3: Using Arrays**
+
+   ```php
+    /* In this example, an array variable `$colors` is created with three elements.
+    Individual elements of the array are accessed using their index and displayed. */
+
+    // Creating an array variable
+    $colors = array("Red", "Green", "Blue");
+
+    // Using the array
+    echo "The first color is " . $colors[0] . ", and the third color is " . $colors[2];
+    // Outputs: The first color is Red, and the third color is Blue
+   ```
+
 ### Database Connectivity
 
 **Use PDO to connect to a database then use a try/catch to test the connection**
