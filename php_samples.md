@@ -156,9 +156,7 @@ $escapedString = htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
     $count = count($array);
     ```
 
-13. **Convert Comma-S
-
-eparated List to Array**
+13. **Convert Comma-Separated List to Array**
     ```php
     $array = explode(',', $commaSeparatedList);
     ```
