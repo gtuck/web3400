@@ -1,6 +1,6 @@
 {
 	// Name of the configuration/environment.
-	"name": "web3400 LAMP Stack",
+	"name": "web3400",
 
 	// Specifies the Docker Compose file to be used.
 	"dockerComposeFile": "docker-compose.yml",
