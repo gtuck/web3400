@@ -8,19 +8,17 @@
    $user = 'username';
    $pass = 'password';
    $charset = 'utf8mb4';
-
-   $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-   try {
-       $pdo = new PDO($dsn, $user, $pass);
-       echo "Connected successfully";
-   } catch (\PDOException $e) {
-       throw new \PDOException($e->getMessage(), (int)$e->getCode());
-   }
    ```
 
 2. **Check and Output Connection Errors**
-   Already included in the try-catch block of the above example.
-
+   ```php
+   try {
+      $pdo = new PDO($dsn, $user, $pass);
+      echo "Connected successfully";
+   } catch (\PDOException $e) {
+      throw new \PDOException($e->getMessage(), (int)$e->getCode());
+   }
+   ```
 3. **Select Database Table and Populate Results**
    ```php
    $stmt = $pdo->query('SELECT * FROM table_name');
@@ -49,16 +47,7 @@
    echo $affectedRows;
    ```
 
-7. **Escape Special Characters in a String**
-   PDO prepares statements making this unnecessary, but for manual escaping:
-   ```php
-   $safeString = $pdo->quote("unsafe_string");
-   ```
-
-8. **SQL 'Prepared Statement'**
-   See "Insert a New Record" above.
-
-9. **Close Query and Database Connection**
+7. **Close Query and Database Connection**
    PDO and prepared statements do not require explicit closing. They are closed automatically when the variable is no longer in use.
 
 ### Escape HTML Entities
