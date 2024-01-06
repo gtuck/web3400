@@ -50,6 +50,65 @@ Creating and using variables in PHP is a fundamental part of programming in this
     echo "The first color is " . $colors[0] . ", and the third color is " . $colors[2];
     // Outputs: The first color is Red, and the third color is Blue
    ```
+### Conditional (if) statements
+
+Conditional statements are a crucial part of any programming language, including PHP, as they allow you to perform different actions based on different conditions. Here are three examples demonstrating the use of `if`, `if-else`, and `if-elseif-else` in PHP:
+
+**1. Using `if` Statement**
+
+The `if` statement is used to execute a block of code only if a specified condition is true.
+
+   ```php
+    /* In this example, the message "It's warm outside!" is printed only if `$temperature` is greater than 25. */
+
+    $temperature = 30;
+
+    // Simple if statement
+    if ($temperature > 25) {
+        echo "It's warm outside!";
+    }
+    // Outputs: It's warm outside!
+   ```
+
+**2. Using `if-else` Statement**
+
+The `if-else` statement is used to execute one block of code if a condition is true and another block if the condition is false.
+
+   ```php
+    /* Here, the code checks if `$age` is 18 or more. If true, it prints "You are an adult."; otherwise, it prints "You are a minor." */
+    $age = 18;
+
+    // if-else statement
+    if ($age >= 18) {
+        echo "You are an adult.";
+    } else {
+        echo "You are a minor.";
+    }
+    // Outputs: You are an adult.
+   ```
+
+**3. Using `if-elseif-else` Statement**
+
+The `if-elseif-else` statement is used to specify several conditions to check, executing different blocks of code for each condition.
+
+   ```php
+    /* In this example, the code checks the `$score` variable against multiple conditions to determine and print a grade. */
+
+    $score = 75;
+
+    // if-elseif-else statement
+    if ($score >= 90) {
+        echo "Grade: A";
+    } elseif ($score >= 80) {
+        echo "Grade: B";
+    } elseif ($score >= 70) {
+        echo "Grade: C";
+    } else {
+        echo "Grade: F";
+    }
+    // Outputs: Grade: C
+    ?>
+   ```
 
 ### Database Connectivity
 
