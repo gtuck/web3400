@@ -27,36 +27,57 @@
    ```php
    $pdo = pdo_connect_mariadb();
    ```
-4. **Select Database Table and Populate Results**
-   ```php
-   $stmt = $pdo->query('SELECT * FROM table_name');
-   while ($row = $stmt->fetch()) {
-       echo $row['column_name'] . "\n";
-   }
-   ```
-5. **Retrieve Number of Rows**
-   ```php
-   $stmt = $pdo->query('SELECT * FROM table_name');
-   $rowCount = $stmt->rowCount();
-   echo $rowCount;
-   ```
+4. **Create (INSERT)**
+```php
+$sql = "INSERT INTO table_name (column1, column2) VALUES (?, ?)";
+$stmt = $pdo->prepare($sql);
+$stmt->execute(['value1', 'value2']);
+```
+In this example, `'value1'` and `'value2'` are the values to be inserted into `column1` and `column2` respectively.
 
-6. **Insert a New Record**
-   ```php
-   $sql = "INSERT INTO table_name (column1, column2) VALUES (?, ?)";
-   $stmt= $pdo->prepare($sql);
-   $stmt->execute(['value1', 'value2']);
-   ```
+5. **Read (SELECT)**
+```php
+$sql = "SELECT * FROM table_name WHERE column1 = ?";
+$stmt = $pdo->prepare($sql);
+$stmt->execute(['value1']);
 
-7. **Retrieve Number of Affected Rows**
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+foreach ($results as $row) {
+    // process each row
+}
+```
+Here, `'value1'` is the value used in the WHERE clause to filter results from `table_name`.
+
+6. **Update**
+```php
+$sql = "UPDATE table_name SET column1 = ? WHERE column2 = ?";
+$stmt = $pdo->prepare($sql);
+$stmt->execute(['newValue1', 'value2']);
+```
+In this case, `column1` is updated to `'newValue1'` where `column2` equals `'value2'`.
+
+7. **Delete**
+```php
+$sql = "DELETE FROM table_name WHERE column1 = ?";
+$stmt = $pdo->prepare($sql);
+$stmt->execute(['value1']);
+```
+This deletes rows from `table_name` where `column1` equals `'value1'`.
+
+8. **Retrieve Number of Affected Rows**
    ```php
    $affectedRows = $stmt->rowCount();
    echo $affectedRows;
    ```
-
-8. **Close Query and Database Connection**
+9. **Get the ID for the last record inserted**
+   ```php
+   // Get the ID of the last inserted record
+    $lastId = $pdo->lastInsertId();
+    ```
+10. **Close Query and Database Connection**
    ```txt
-   PDO and prepared statements do not require explicit closing. They are closed automatically when the variable is no longer in use.
+   PDO and prepared statements do not require explicit closing.
+   They are closed automatically when the variable is no longer in use.
    ```
 
 ### Escape HTML Entities
