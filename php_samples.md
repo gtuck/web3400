@@ -26,7 +26,7 @@
    ```
 **Create a PDO databse connection object by calling a function**
    ```php
-   $pdo = pdo_connect_mariadb();
+    $pdo = pdo_connect_mariadb();
    ```
 
 ### Database CRUD operations
@@ -72,8 +72,8 @@
 
 **Retrieve Number of Affected Rows**
    ```php
-   $affectedRows = $stmt->rowCount();
-   echo $affectedRows;
+    $affectedRows = $stmt->rowCount();
+    echo $affectedRows;
    ```
 **Get the ID for the last record inserted**
    ```php
@@ -81,81 +81,81 @@
    ```
 **Close Query and Database Connection**
    ```txt
-   PDO and prepared statements do not require explicit closing.
-   They are closed automatically when the variable is no longer in use.
+    PDO and prepared statements do not require explicit closing.
+    They are closed automatically when the variable is no longer in use.
    ```
 
 ### Working with Strings
 
 **Replace Text in a String**
    ```php
-   $newString = str_replace("oldText", "newText", $string);
+    $newString = str_replace("oldText", "newText", $string);
    ```
 
 **Replace Multiple Words in a String**
    ```php
-   $search  = ['word1', 'word2'];
-   $replace = ['replace1', 'replace2'];
-   $newString = str_replace($search, $replace, $string);
+    $search  = ['word1', 'word2'];
+    $replace = ['replace1', 'replace2'];
+    $newString = str_replace($search, $replace, $string);
    ```
 
 **Declare an Array of Strings**
    ```php
-   $stringArray = ['string1', 'string2', 'string3'];
+    $stringArray = ['string1', 'string2', 'string3'];
    ```
 
 **Check if a String Contains a Specific Word**
    ```php
-   if (strpos($string, 'word') !== false) {
-       echo "Word found!";
-   }
+    if (strpos($string, 'word') !== false) {
+        echo "Word found!";
+    }
    ```
 
 ### Working with Arrays
 
 **Creating an Array**
    ```php
-   $array = ['item1', 'item2', 'item3'];
+    $array = ['item1', 'item2', 'item3'];
    ```
 
 **Inserting New Items into an Array**
    ```php
-   $array[] = 'newItem';
+    $array[] = 'newItem';
    ```
 
 **Remove Item from an Array**
    ```php
-   unset($array[$key]);
+    unset($array[$key]);
    ```
 
 **Reindex Values after Removing an Item**
    ```php
-   $array = array_values($array);
+    $array = array_values($array);
    ```
 
 **Reverse an Array**
    ```php
-   $reversedArray = array_reverse($array);
+    $reversedArray = array_reverse($array);
    ```
 
 **Merge Two or More Arrays**
    ```php
-   $mergedArray = array_merge($array1, $array2);
+    $mergedArray = array_merge($array1, $array2);
    ```
 
 **Return Only the Array Keys**
    ```php
-   $keys = array_keys($array);
+    $keys = array_keys($array);
    ```
 
 **Sort an Array in Ascending Order**
    ```php
-   sort($array);
+    sort($array);
    ```
 
 **Sort an Array in Reverse Order**
    ```php
-   rsort($array);
+    rsort($array);
    ```
 
 **Check if an Item Exists in an Array**
@@ -174,84 +174,84 @@
 
 **Count the Number of Items in an Array**
    ```php
-        $count = count($array);
+    $count = count($array);
    ```
 
 **Convert Comma-Separated List to Array**
    ```php
-        $array = explode(',', $commaSeparatedList);
+    $array = explode(',', $commaSeparatedList);
    ```
 
 **Convert an Array to a Comma-Separated List**
    ```php
-       $commaSeparatedList = implode(',', $array);
+    $commaSeparatedList = implode(',', $array);
    ```
 
 ### GET and POST Requests
 **Check if the $_GET Request Variable Exists**
    ```php
-   if (isset($_GET['param'])) {
-       // Do something
-   }
+    if (isset($_GET['param'])) {
+        // Do something
+    }
    ```
 
 **Check if the $_POST Variable Exists**
    ```php
-   if (isset($_POST['param'])) {
-       // Do something
-   }
+    if (isset($_POST['param'])) {
+        // Do something
+    }
    ```
 
 ### Working with Password Hashing
 **Create a Password Hash**
    ```php
-   $hash = password_hash("password", PASSWORD_DEFAULT);
+    $hash = password_hash("password", PASSWORD_DEFAULT);
    ```
 
 **Verify Hashed Password**
    ```php
-   if (password_verify('password', $hash)) {
-       echo 'Password is valid!';
-   } else {
-       echo 'Invalid password.';
-   }
+    if (password_verify('password', $hash)) {
+        echo 'Password is valid!';
+    } else {
+        echo 'Invalid password.';
+    }
    ```
 
 ### Session Handling
 **Create a New Session**
    ```php
-   session_start();
+    session_start();
    ```
 
 **Free All Session Variables**
    ```php
-   session_unset();
+    session_unset();
    ```
 
 **Destroy All Session Variables**
    ```php
-   session_destroy();
+    session_destroy();
    ```
 
 ### Introduction to the header() Function
 **Redirect the URL**
-```php
-header("Location: https://www.example.com");
-exit();
-```
+   ```php
+    header("Location: https://www.example.com");
+    exit();
+   ```
 
 ### Determining the Current Date
 **Get the Date from a Timestamp:**
-```php
-echo date("Y-m-d H:i:s");
-```
+   ```php
+    echo date("Y-m-d H:i:s");
+   ```
 
 ### Create and Parse JSON
-```php
-// Create JSON
-$array = ['key' => 'value'];
-$json = json_encode($array);
+   ```php
+    // Create JSON
+    $array = ['key' => 'value'];
+    $json = json_encode($array);
 
-// Parse JSON
-$parsedArray = json_decode($json, true);
-```
+    // Parse JSON
+    $parsedArray = json_decode($json, true);
+  ```
