@@ -1,0 +1,280 @@
+*Helpful PHP code samples:*
+
+### Database Connectivity
+1. **Connect to MySQL Database using PDO**
+   ```php
+   $host = 'localhost';
+   $db   = 'your_database';
+   $user = 'username';
+   $pass = 'password';
+   $charset = 'utf8mb4';
+
+   $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+   try {
+       $pdo = new PDO($dsn, $user, $pass);
+       echo "Connected successfully";
+   } catch (\PDOException $e) {
+       throw new \PDOException($e->getMessage(), (int)$e->getCode());
+   }
+   ```
+
+2. **Check and Output Connection Errors**
+   Already included in the try-catch block of the above example.
+
+3. **Select Database Table and Populate Results**
+   ```php
+   $stmt = $pdo->query('SELECT * FROM table_name');
+   while ($row = $stmt->fetch()) {
+       echo $row['column_name'] . "\n";
+   }
+   ```
+
+4. **Retrieve Number of Rows**
+   ```php
+   $stmt = $pdo->query('SELECT * FROM table_name');
+   $rowCount = $stmt->rowCount();
+   echo $rowCount;
+   ```
+
+5. **Insert a New Record**
+   ```php
+   $sql = "INSERT INTO table_name (column1, column2) VALUES (?, ?)";
+   $stmt= $pdo->prepare($sql);
+   $stmt->execute(['value1', 'value2']);
+   ```
+
+6. **Retrieve Number of Affected Rows**
+   ```php
+   $affectedRows = $stmt->rowCount();
+   echo $affectedRows;
+   ```
+
+7. **Escape Special Characters in a String**
+   PDO prepares statements making this unnecessary, but for manual escaping:
+   ```php
+   $safeString = $pdo->quote("unsafe_string");
+   ```
+
+8. **SQL 'Prepared Statement'**
+   See "Insert a New Record" above.
+
+9. **Close Query and Database Connection**
+   PDO and prepared statements do not require explicit closing. They are closed automatically when the variable is no longer in use.
+
+### Escape HTML Entities
+```php
+$escapedString = htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
+```
+
+### Working with Strings
+1. **Replace Text in a String**
+   ```php
+   $newString = str_replace("oldText", "newText", $string);
+   ```
+
+2. **Replace Multiple Words in a String**
+   ```php
+   $search  = ['word1', 'word2'];
+   $replace = ['replace1', 'replace2'];
+   $newString = str_replace($search, $replace, $string);
+   ```
+
+3. **Declare an Array of Strings**
+   ```php
+   $stringArray = ['string1', 'string2', 'string3'];
+   ```
+
+4. **Check if a String Contains a Specific Word**
+   ```php
+   if (strpos($string, 'word') !== false) {
+       echo "Word found!";
+   }
+   ```
+
+### Working with Arrays
+1. **Creating an Array**
+   ```php
+   $array = ['item1', 'item2', 'item3'];
+   ```
+
+2. **Inserting New Items into an Array**
+   ```php
+   $array[] = 'newItem';
+   ```
+
+3. **Remove Item from an Array**
+   ```php
+   unset($array[$key]);
+   ```
+
+4. **Reindex Values after Removing an Item**
+   ```php
+   $array = array_values($array);
+   ```
+
+5. **Reverse an Array**
+   ```php
+   $reversedArray = array_reverse($array);
+   ```
+
+6. **Merge Two or More Arrays**
+   ```php
+   $mergedArray = array_merge($array1, $array2);
+   ```
+
+7. **Return Only the Array Keys**
+   ```php
+   $keys = array_keys($array);
+   ```
+
+8. **Sort an Array in Ascending Order**
+   ```php
+   sort($array);
+   ```
+
+9. **Sort an Array in Reverse Order**
+   ```php
+   rsort($array);
+   ```
+
+10. **Check if an Item Exists in an Array**
+    ```php
+    if (in_array('item', $array)) {
+        echo "Item found!";
+    }
+    ```
+
+11. **Check if the Key Exists in an Array**
+    ```php
+    if (array_key_exists('key', $array)) {
+        echo "Key exists!";
+    }
+    ```
+
+12. **Count the Number of Items in an Array**
+    ```php
+    $count = count($array);
+    ```
+
+13. **Convert Comma-S
+
+eparated List to Array**
+    ```php
+    $array = explode(',', $commaSeparatedList);
+    ```
+
+14. **Convert an Array to a Comma-Separated List**
+    ```php
+    $commaSeparatedList = implode(',', $array);
+    ```
+
+### GET and POST Requests
+1. **Retrieve a GET Request Parameter**
+   ```php
+   $param = $_GET['param'] ?? 'default';
+   ```
+
+2. **Check if the $_GET Request Variable Exists**
+   ```php
+   if (isset($_GET['param'])) {
+       // Do something
+   }
+   ```
+
+3. **Check if the $_POST Variable Exists**
+   ```php
+   if (isset($_POST['param'])) {
+       // Do something
+   }
+   ```
+
+### Working with Password Hashing
+1. **Create a Password Hash**
+   ```php
+   $hash = password_hash("password", PASSWORD_DEFAULT);
+   ```
+
+2. **Verify Hashed Password**
+   ```php
+   if (password_verify('password', $hash)) {
+       echo 'Password is valid!';
+   } else {
+       echo 'Invalid password.';
+   }
+   ```
+
+### Session Handling
+1. **Create a New Session**
+   ```php
+   session_start();
+   ```
+
+2. **Free All Session Variables**
+   ```php
+   session_unset();
+   ```
+
+3. **Destroy All Session Variables**
+   ```php
+   session_destroy();
+   ```
+
+### Introduction to the header() Function
+**Redirect the URL**
+```php
+header("Location: https://www.example.com");
+exit();
+```
+
+### Working with $_SERVER
+```php
+$serverInfo = $_SERVER['SERVER_NAME'];
+```
+
+### Get the Contents of a URL File curl_init()
+```php
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "http://www.example.com");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+$output = curl_exec($ch);
+curl_close($ch);
+```
+
+### Using the PHP file_get_contents Function
+```php
+$content = file_get_contents('http://www.example.com');
+```
+
+### Determining the Current Date
+**Get the Date from a Timestamp:**
+```php
+echo date("Y-m-d H:i:s");
+```
+
+### Create and Parse JSON
+```php
+// Create JSON
+$array = ['key' => 'value'];
+$json = json_encode($array);
+
+// Parse JSON
+$parsedArray = json_decode($json, true);
+```
+
+### Get the Full URL
+```php
+$fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+```
+
+### Format Numbers
+1. **Format Integers**
+   ```php
+   echo number_format(123456789);
+   ```
+
+2. **Format Number with Decimals**
+   ```php
+   echo number_format(123456.789, 2);
+   ```
+
+These snippets cover a broad range of basic and intermediate PHP functionalities, suitable for various web development scenarios. Remember to always tailor these snippets to the specific requirements and context of your project.
