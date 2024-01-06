@@ -48,7 +48,9 @@
    ```
 
 7. **Close Query and Database Connection**
-   ```PDO and prepared statements do not require explicit closing. They are closed automatically when the variable is no longer in use.```
+   ```txt
+   PDO and prepared statements do not require explicit closing. They are closed automatically when the variable is no longer in use.
+   ```
 
 ### Escape HTML Entities
 ```php
