@@ -1,4 +1,4 @@
-## Helpful PHP code samples:
+## PHP code samples:
 
 ### Database Connectivity
 
