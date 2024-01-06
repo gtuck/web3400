@@ -46,6 +46,8 @@
     $stmt->execute(['value1']);
 
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    //Use a foreach loop to use/display each result
     foreach ($results as $row) {
         // process each row
     }
