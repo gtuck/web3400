@@ -1,7 +1,8 @@
 # Helpful PHP code samples:
 
 ### Database Connectivity
-1. **Use PDO to connect to a database then use a try/catch to test the connection**
+
+**Use PDO to connect to a database then use a try/catch to test the connection**
    ```php
     function pdo_connect_mariadb()
     {
@@ -23,7 +24,7 @@
         }
     }
    ```
-2. **Create a PDO databse connection object by calling a function**
+**Create a PDO databse connection object by calling a function**
    ```php
    $pdo = pdo_connect_mariadb();
    ```
@@ -31,41 +32,43 @@
 ### Database CRUD operations
 
 **Create (INSERT)**
-```php
-$sql = "INSERT INTO table_name (column1, column2) VALUES (?, ?)";
-$stmt = $pdo->prepare($sql);
-$stmt->execute(['value1', 'value2']);
-```
-In this example, `'value1'` and `'value2'` are the values to be inserted into `column1` and `column2` respectively.
+    ```php
+    $sql = "INSERT INTO table_name (column1, column2) VALUES (?, ?)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(['value1', 'value2']);
+    ```
+    In this example, `'value1'` and `'value2'` are the values to be inserted into `column1` and `column2` respectively.
 
 **Read (SELECT)**
-```php
-$sql = "SELECT * FROM table_name WHERE column1 = ?";
-$stmt = $pdo->prepare($sql);
-$stmt->execute(['value1']);
+    ```php
+    $sql = "SELECT * FROM table_name WHERE column1 = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(['value1']);
 
-$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-foreach ($results as $row) {
-    // process each row
-}
-```
-Here, `'value1'` is the value used in the WHERE clause to filter results from `table_name`.
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($results as $row) {
+        // process each row
+    }
+    ```
+    Here, `'value1'` is the value used in the WHERE clause to filter results from `table_name`.
 
 **Update**
-```php
-$sql = "UPDATE table_name SET column1 = ? WHERE column2 = ?";
-$stmt = $pdo->prepare($sql);
-$stmt->execute(['newValue1', 'value2']);
-```
-In this case, `column1` is updated to `'newValue1'` where `column2` equals `'value2'`.
+    ```php
+    $sql = "UPDATE table_name SET column1 = ? WHERE column2 = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(['newValue1', 'value2']);
+    ```
+    In this case, `column1` is updated to `'newValue1'` where `column2` equals `'value2'`.
 
 **Delete**
-```php
-$sql = "DELETE FROM table_name WHERE column1 = ?";
-$stmt = $pdo->prepare($sql);
-$stmt->execute(['value1']);
-```
-This deletes rows from `table_name` where `column1` equals `'value1'`.
+    ```php
+    $sql = "DELETE FROM table_name WHERE column1 = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(['value1']);
+    ```
+    This deletes rows from `table_name` where `column1` equals `'value1'`.
+
+### Other Database operations
 
 **Retrieve Number of Affected Rows**
    ```php
@@ -83,29 +86,29 @@ This deletes rows from `table_name` where `column1` equals `'value1'`.
    ```
 
 ### Escape HTML Entities
-```php
-$escapedString = htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
-```
+    ```php
+    $escapedString = htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
+    ```
 
 ### Working with Strings
-1. **Replace Text in a String**
+   **Replace Text in a String**
    ```php
    $newString = str_replace("oldText", "newText", $string);
    ```
 
-2. **Replace Multiple Words in a String**
+   **Replace Multiple Words in a String**
    ```php
    $search  = ['word1', 'word2'];
    $replace = ['replace1', 'replace2'];
    $newString = str_replace($search, $replace, $string);
    ```
 
-3. **Declare an Array of Strings**
+   **Declare an Array of Strings**
    ```php
    $stringArray = ['string1', 'string2', 'string3'];
    ```
 
-4. **Check if a String Contains a Specific Word**
+   **Check if a String Contains a Specific Word**
    ```php
    if (strpos($string, 'word') !== false) {
        echo "Word found!";
