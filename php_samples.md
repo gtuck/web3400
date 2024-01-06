@@ -188,19 +188,14 @@
    ```
 
 ### GET and POST Requests
-1. **Retrieve a GET Request Parameter**
-   ```php
-   $param = $_GET['param'] ?? 'default';
-   ```
-
-2. **Check if the $_GET Request Variable Exists**
+**Check if the $_GET Request Variable Exists**
    ```php
    if (isset($_GET['param'])) {
        // Do something
    }
    ```
 
-3. **Check if the $_POST Variable Exists**
+**Check if the $_POST Variable Exists**
    ```php
    if (isset($_POST['param'])) {
        // Do something
@@ -208,12 +203,12 @@
    ```
 
 ### Working with Password Hashing
-1. **Create a Password Hash**
+**Create a Password Hash**
    ```php
    $hash = password_hash("password", PASSWORD_DEFAULT);
    ```
 
-2. **Verify Hashed Password**
+**Verify Hashed Password**
    ```php
    if (password_verify('password', $hash)) {
        echo 'Password is valid!';
@@ -223,17 +218,17 @@
    ```
 
 ### Session Handling
-1. **Create a New Session**
+**Create a New Session**
    ```php
    session_start();
    ```
 
-2. **Free All Session Variables**
+**Free All Session Variables**
    ```php
    session_unset();
    ```
 
-3. **Destroy All Session Variables**
+**Destroy All Session Variables**
    ```php
    session_destroy();
    ```
@@ -243,25 +238,6 @@
 ```php
 header("Location: https://www.example.com");
 exit();
-```
-
-### Working with $_SERVER
-```php
-$serverInfo = $_SERVER['SERVER_NAME'];
-```
-
-### Get the Contents of a URL File curl_init()
-```php
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "http://www.example.com");
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-$output = curl_exec($ch);
-curl_close($ch);
-```
-
-### Using the PHP file_get_contents Function
-```php
-$content = file_get_contents('http://www.example.com');
 ```
 
 ### Determining the Current Date
@@ -279,21 +255,3 @@ $json = json_encode($array);
 // Parse JSON
 $parsedArray = json_decode($json, true);
 ```
-
-### Get the Full URL
-```php
-$fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-```
-
-### Format Numbers
-1. **Format Integers**
-   ```php
-   echo number_format(123456789);
-   ```
-
-2. **Format Number with Decimals**
-   ```php
-   echo number_format(123456.789, 2);
-   ```
-
-These snippets cover a broad range of basic and intermediate PHP functionalities, suitable for various web development scenarios. Remember to always tailor these snippets to the specific requirements and context of your project.
