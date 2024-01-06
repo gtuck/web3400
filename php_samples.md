@@ -32,14 +32,14 @@
 ### Database CRUD operations
 
 **Create (INSERT)**
-```php
+   ```php
     //In this example, `'value1'` and `'value2'` are the values to be inserted into `column1` and `column2` respectively.
     $sql = "INSERT INTO table_name (column1, column2) VALUES (?, ?)";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['value1', 'value2']);
-```
+   ```
 **Read (SELECT)**
-```php
+   ```php
     //Here, `'value1'` is the value used in the WHERE clause to filter results from `table_name`.
     $sql = "SELECT * FROM table_name WHERE column1 = ?";
     $stmt = $pdo->prepare($sql);
@@ -51,22 +51,21 @@
     foreach ($results as $row) {
         // process each row
     }
-```
+   ```
 **Update**
-```php
+   ```php
     //In this case, `column1` is updated to `'newValue1'` where `column2` equals `'value2'`.
     $sql = "UPDATE table_name SET column1 = ? WHERE column2 = ?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['newValue1', 'value2']);
-```
-
+   ```
 **Delete**
-```php
+   ```php
     //This deletes rows from `table_name` where `column1` equals `'value1'`.
     $sql = "DELETE FROM table_name WHERE column1 = ?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['value1']);
-```
+   ```
 
 ### Other Database operations
 
