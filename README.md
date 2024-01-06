@@ -1,4 +1,4 @@
-**web3400 Dev Container**
+# web3400 Dev Container
 
 LAMP Development Stack with phpMyAdmin and Composer preinstalled.
 
