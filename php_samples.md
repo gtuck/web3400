@@ -54,7 +54,7 @@ Creating and using variables in PHP is a fundamental part of programming in this
 
 Conditional statements are a crucial part of any programming language, including PHP, as they allow you to perform different actions based on different conditions. Here are three examples demonstrating the use of `if`, `if-else`, and `if-elseif-else` in PHP:
 
-**1. Using `if` Statement**
+**Using `if` Statement**
 
 The `if` statement is used to execute a block of code only if a specified condition is true.
 
@@ -70,7 +70,7 @@ The `if` statement is used to execute a block of code only if a specified condit
     // Outputs: It's warm outside!
    ```
 
-**2. Using `if-else` Statement**
+**Using `if-else` Statement**
 
 The `if-else` statement is used to execute one block of code if a condition is true and another block if the condition is false.
 
@@ -87,7 +87,7 @@ The `if-else` statement is used to execute one block of code if a condition is t
     // Outputs: You are an adult.
    ```
 
-**3. Using `if-elseif-else` Statement**
+**Using `if-elseif-else` Statement**
 
 The `if-elseif-else` statement is used to specify several conditions to check, executing different blocks of code for each condition.
 
