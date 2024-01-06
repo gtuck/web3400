@@ -1,4 +1,4 @@
-***Helpful PHP code samples:***
+# Helpful PHP code samples:
 
 ### Database Connectivity
 1. **Connect to MySQL Database using PDO**
