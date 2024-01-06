@@ -7,8 +7,8 @@ Creating and using variables in PHP is a fundamental part of programming in this
 **Example 1: Working with Strings**
 
    ```php
-    /* In this example, a string variable `$name` is created and assigned the value `"John Doe"`
-    It's then concatenated with another string and displayed. */
+    /* In this example, a string variable `$name` is created and assigned the value 
+    `"John Doe"` It's then concatenated with another string and displayed. */
 
     // Creating a string variable
     $name = "John Doe";
@@ -50,7 +50,7 @@ Creating and using variables in PHP is a fundamental part of programming in this
     echo "The first color is " . $colors[0] . ", and the third color is " . $colors[2];
     // Outputs: The first color is Red, and the third color is Blue
    ```
-### Conditional (if) statements
+### Conditional statements
 
 Conditional statements are a crucial part of any programming language, including PHP, as they allow you to perform different actions based on different conditions. Here are three examples demonstrating the use of `if`, `if-else`, and `if-elseif-else` in PHP:
 
