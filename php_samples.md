@@ -33,12 +33,11 @@
 
 **Create (INSERT)**
 ```php
+    //In this example, `'value1'` and `'value2'` are the values to be inserted into `column1` and `column2` respectively.
     $sql = "INSERT INTO table_name (column1, column2) VALUES (?, ?)";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['value1', 'value2']);
 ```
-    In this example, `'value1'` and `'value2'` are the values to be inserted into `column1` and `column2` respectively.
-
 **Read (SELECT)**
 ```php
     $sql = "SELECT * FROM table_name WHERE column1 = ?";
