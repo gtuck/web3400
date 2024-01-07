@@ -50,6 +50,56 @@ Creating and using variables in PHP is a fundamental part of programming in this
     echo "The first color is " . $colors[0] . ", and the third color is " . $colors[2];
     // Outputs: The first color is Red, and the third color is Blue
    ```
+
+## Basic PHP data types:
+
+1. **Boolean (bool)**: Represents true or false.
+2. **Integer (int)**: A whole number.
+3. **Floating Point Number (float)**: A number with decimals.
+4. **String**: A sequence of characters.
+5. **Array**: A collection of key-value pairs in a specific order.
+6. **Object**: An entity created from a predefined class.
+7. **Callable**: A reference to a function in PHP.
+8. **Iterable**: Any array or object compatible with the Traversable interface.
+9. **Resource**: A link to an external resource.
+10. **NULL**: A variable without any value.
+
+Data types in PHP are not explicitly declared; rather, they are determined at runtime based on the context. There are multiple methods to identify a variable's type.
+
+**Identifying Type and Value**
+
+- **Using var_dump()**: This function displays both the type and value of a variable.
+
+  Example:
+  ```php
+   $text = "PHP";
+   var_dump($text);
+   // Output: string(3) "PHP"
+  ```
+
+- **Using gettype()**: This function returns a string describing the variable's type.
+
+  Example:
+  ```php
+   $text = "PHP";
+   echo(gettype($text));
+   // Output: string
+  ```
+
+**Type Checking Functions**
+
+PHP provides specific functions to check a variable's type:
+
+- `is_bool($value)`: Checks if the value is a boolean.
+- `is_int($value)`: Verifies if the value is an integer (also `is_integer()`).
+- `is_float($value)`: Determines if the value is a floating-point number.
+- `is_string($value)`: Confirms if the value is a string.
+- `is_array($value)`: Checks if the value is an array.
+- `is_object($value)`: Asserts if the value is an object.
+- `is_iterable($value)`: Verifies if the value is iterable.
+- `is_resource($value)`: Checks if the value is a resource.
+- `is_null($value)`: Determines if the value is NULL.
+
 ## String concatenation
 
 String concatenation in PHP is the process of joining one or more strings together. PHP uses the dot `.` operator for concatenation. You can concatenate strings enclosed in either single quotes `' '` or double quotes `" "`. Here are three examples demonstrating these concepts:
@@ -104,6 +154,32 @@ Combining both single and double quotes in concatenation:
    echo $message;
    // Outputs: You have 3 apples.
   ```
+
+## String functions
+
+**Replace Text in a String**
+   ```php
+    $newString = str_replace("oldText", "newText", $string);
+   ```
+
+**Replace Multiple Words in a String**
+   ```php
+    $search  = ['word1', 'word2'];
+    $replace = ['replace1', 'replace2'];
+    $newString = str_replace($search, $replace, $string);
+   ```
+
+**Declare an Array of Strings**
+   ```php
+    $stringArray = ['string1', 'string2', 'string3'];
+   ```
+
+**Check if a String Contains a Specific Word**
+   ```php
+    if (strpos($string, 'word') !== false) {
+        echo "Word found!";
+    }
+   ```
 
 ## Conditional statements
 
@@ -247,32 +323,6 @@ The `if-elseif-else` statement is used to specify several conditions to check, e
    ```txt
     PDO and prepared statements do not require explicit closing.
     They are closed automatically when the variable is no longer in use.
-   ```
-
-## Working with Strings
-
-**Replace Text in a String**
-   ```php
-    $newString = str_replace("oldText", "newText", $string);
-   ```
-
-**Replace Multiple Words in a String**
-   ```php
-    $search  = ['word1', 'word2'];
-    $replace = ['replace1', 'replace2'];
-    $newString = str_replace($search, $replace, $string);
-   ```
-
-**Declare an Array of Strings**
-   ```php
-    $stringArray = ['string1', 'string2', 'string3'];
-   ```
-
-**Check if a String Contains a Specific Word**
-   ```php
-    if (strpos($string, 'word') !== false) {
-        echo "Word found!";
-    }
    ```
 
 ## Working with Arrays
