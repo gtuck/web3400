@@ -51,7 +51,9 @@ Creating and using variables in PHP is a fundamental part of programming in this
     // Outputs: The first color is Red, and the third color is Blue
    ```
 
-## Basic PHP data types:
+## PHP data types:
+
+PHP data types are not explicitly declared; they are determined at runtime based on the context. In other words, PHP is a Dynamicly Typed Language.
 
 - **Boolean (bool)**: Represents true or false.
 - **Integer (int)**: A whole number.
@@ -64,7 +66,7 @@ Creating and using variables in PHP is a fundamental part of programming in this
 - **Resource**: A link to an external resource.
 - **NULL**: A variable without any value.
 
-PHP data types are not explicitly declared; rather, they are determined at runtime based on the context. There are multiple methods to identify a variable's type.
+There are multiple methods to identify a variable's type.
 
 **Identifying Type and Value**
 
