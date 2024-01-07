@@ -10,9 +10,6 @@ PHP data types are not explicitly declared; they are determined at runtime based
 - **String**: A sequence of characters.
 - **Array**: A collection of key-value pairs in a specific order.
 - **Object**: An entity created from a predefined class.
-- **Callable**: A reference to a function in PHP.
-- **Iterable**: Any array or object compatible with the Traversable interface.
-- **Resource**: A link to an external resource.
 - **NULL**: A variable without any value.
 
 There are multiple methods to identify a variable's type.
@@ -38,8 +35,6 @@ PHP provides specific functions to check a variable's type:
 - `is_string($value)`: Confirms if the value is a string.
 - `is_array($value)`: Checks if the value is an array.
 - `is_object($value)`: Asserts if the value is an object.
-- `is_iterable($value)`: Verifies if the value is iterable.
-- `is_resource($value)`: Checks if the value is a resource.
 - `is_null($value)`: Determines if the value is NULL.
 
 ## Creating & using variables
