@@ -64,26 +64,17 @@ Creating and using variables in PHP is a fundamental part of programming in this
 9. **Resource**: A link to an external resource.
 10. **NULL**: A variable without any value.
 
-Data types in PHP are not explicitly declared; rather, they are determined at runtime based on the context. There are multiple methods to identify a variable's type.
+PHP data types are not explicitly declared; rather, they are determined at runtime based on the context. There are multiple methods to identify a variable's type.
 
 **Identifying Type and Value**
 
-- **Using var_dump()**: This function displays both the type and value of a variable.
+- **Using var_dump()**: This function displays a variable's type and value.
 
   Example:
   ```php
    $text = "PHP";
    var_dump($text);
    // Output: string(3) "PHP"
-  ```
-
-- **Using gettype()**: This function returns a string describing the variable's type.
-
-  Example:
-  ```php
-   $text = "PHP";
-   echo(gettype($text));
-   // Output: string
   ```
 
 **Type Checking Functions**
@@ -102,7 +93,7 @@ PHP provides specific functions to check a variable's type:
 
 ## String concatenation
 
-String concatenation in PHP is the process of joining one or more strings together. PHP uses the dot `.` operator for concatenation. You can concatenate strings enclosed in either single quotes `' '` or double quotes `" "`. Here are three examples demonstrating these concepts:
+String concatenation in PHP is joining one or more strings together. PHP uses the dot `.` operator for concatenation. You can concatenate strings enclosed in single quotes `' '` or double quotes `" "`. Here are three examples demonstrating these concepts:
 
 **Example 1: Concatenation with Single Quotes**
 
@@ -183,11 +174,11 @@ Combining both single and double quotes in concatenation:
 
 ## Conditional statements
 
-Conditional statements are a crucial part of any programming language, including PHP, as they allow you to perform different actions based on different conditions. Here are three examples demonstrating the use of `if`, `if-else`, and `if-elseif-else` in PHP:
+Conditional statements are crucial to any programming language, including PHP, as they allow you to perform different actions based on different conditions. Here are three examples demonstrating the use of `if`, `if-else`, and `if-elseif-else` in PHP:
 
 **Using `if` Statement**
 
-The `if` statement is used to execute a block of code only if a specified condition is true.
+The `if` statement executes a block of code only if a specified condition is true.
 
    ```php
     /* In this example, the message "It's warm outside!" is printed only if `$temperature` is greater than 25. */
@@ -206,7 +197,7 @@ The `if` statement is used to execute a block of code only if a specified condit
 The `if-else` statement is used to execute one block of code if a condition is true and another block if the condition is false.
 
    ```php
-    /* Here, the code checks if `$age` is 18 or more. If true, it prints "You are an adult."; otherwise, it prints "You are a minor." */
+    /* Here, the code checks if `$age` is 18 or more. If true, it prints, "You are an adult."; otherwise, it prints "You are a minor." */
     $age = 18;
 
     // if-else statement
