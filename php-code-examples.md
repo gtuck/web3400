@@ -162,6 +162,100 @@ Concatenates the right-hand operand to the left-hand operand and assigns the res
    $text .= "World!"; // Equivalent to $text = $text . "World!"; Now $text is "Hello, World!"
   ```
 
+## Comparison operators
+
+Comparison operators in PHP compare two values (numbers or strings) against each other. These operators are essential for controlling the flow of the program through conditional statements like `if`. Let's look at some of the basic comparison operators in PHP, along with examples:
+
+**Equal `==`**
+
+Checks if two values are equal. It returns `true` if the values are equal, and `false` otherwise.
+
+  ```php
+   if (3 == "3") {
+       echo "Yes, they are equal."; // This will be executed
+   }
+  ```
+
+Here, `3` (an integer) and `"3"` (a string) are considered equal because `==` compares only the values, not the types.
+
+**Identical `===`**
+
+Checks if two values are equal and of the same type. It returns `true` only if both the value and the type are the same.
+
+  ```php
+   if (3 === "3") {
+       echo "Yes, they are identical.";
+   } else {
+       echo "No, they are not identical."; // This will be executed
+   }
+  ```
+
+In this case, although `3` and `"3"` have the same value, they are of different types (integer and string), so they are not identical.
+
+**Not Equal `!=`**
+
+Checks if the two values are not equal. It returns `true` if the values are not equal, and `false` otherwise.
+
+  ```php
+   if (3 != 4) {
+       echo "Yes, they are not equal."; // This will be executed
+   }
+  ```
+
+Here, `3` and `4` are different values, so the condition is true.
+
+**Not Identical `!==`**
+
+Checks if two values are not equal or not of the same type.
+
+  ```php
+   if (3 !== "3") {
+       echo "Yes, they are not identical."; // This will be executed
+   }
+  ```
+
+In this case, `3` (integer) and `"3"` (string) are considered not identical because they are of different types.
+
+**Greater Than `>`**
+
+Checks if the value on the left is greater than the value on the right.
+
+  ```php
+   if (5 > 3) {
+       echo "Yes, 5 is greater than 3."; // This will be executed
+   }
+  ```
+
+**Less Than `<`**
+
+Checks if the value on the left is less than the value on the right.
+
+  ```php
+   if (2 < 3) {
+       echo "Yes, 2 is less than 3."; // This will be executed
+   }
+  ```
+
+**Greater Than or Equal To `>=`**
+
+Checks if the value on the left is greater than or equal to the value on the right.
+
+  ```php
+   if (5 >= 5) {
+       echo "Yes, 5 is greater than or equal to 5."; // This will be executed
+   }
+  ```
+
+**8. Less Than or Equal To `<=`**
+
+Checks if the value on the left is less than or equal to the value on the right.
+
+  ```php
+   if (3 <= 5) {
+       echo "Yes, 3 is less than or equal to 5."; // This will be executed
+   }
+  ```
+
 ## String concatenation
 
 String concatenation in PHP is joining one or more strings together. PHP uses the dot `.` operator for concatenation. You can concatenate strings enclosed in single quotes `' '` or double quotes `" "`. Here are three examples demonstrating these concepts:
