@@ -1,5 +1,56 @@
 # PHP code examples:
 
+Commenting code is an important practice in programming, allowing developers to annotate sections of code for readability and maintainability. PHP supports single-line comments, multi-line comments, and documentation comments. Here are three examples illustrating each type:
+
+### Single-Line Comments
+
+Single-line comments in PHP are made using either `//` or `#.` Anything following these symbols on the same line is treated as a comment and is not executed.
+
+**Example using `//`:**
+
+ ```php
+  // This is a single-line comment
+  echo "Hello, World!"; // This part of the line is a comment
+ ```
+
+**Example using `#`:**
+
+ ```php
+  # This is also a single-line comment
+  echo "Hello, World!"; # This part of the line is a comment
+ ```
+
+### Multi-Line Comments
+
+Multi-line comments are used to comment out blocks of code. They start with `/*` and end with `*/`. Everything in between is considered a comment.
+
+ ```php
+  /* This is a multi-line comment
+     and it spans over multiple
+     lines. */
+  echo "This is not a comment.";
+ ```
+
+This method is commonly used for temporarily disabling a block of code or for providing detailed descriptions that span multiple lines.
+
+### Documentation Comments
+
+Documentation comments (or DocComments) are a special type of comment that's used for generating API documentation and is structured in a way that documentation generation tools can parse. They start with `/**` and end with `*/`. Inside, you often find annotations in a specific format.
+
+ ```php
+  /**
+   * Function to greet a user
+   *
+   * @param string $name The name of the user
+   * @return void
+   */
+  function greet($name) {
+      echo "Hello, " . $name . "!";
+  }
+ ```
+
+DocComments are particularly useful in large projects and frameworks, where automated documentation generation becomes a crucial part of the workflow.
+
 ## PHP data types:
 
 PHP data types are not explicitly declared; they are determined at runtime based on the context. In other words, PHP is a Dynamically Typed Language.
