@@ -310,7 +310,7 @@ Checks if the value on the left is less than or equal to the value on the right.
 
 Working with strings is fundamental to any programming language, including PHP. Strings are used to store and manipulate text. Here's a basic example of creating a string variable in PHP and performing some common operations with it:
 
-**Creating a String Variable**
+### Creating a String Variable
 
 ```php
  // Creating a string variable
@@ -319,7 +319,7 @@ Working with strings is fundamental to any programming language, including PHP. 
 
 In this example, `$greeting` is a string variable that holds the text `"Hello, World!"`.
 
-## Basic String Operations
+### Basic String Operations
 
 **Concatenation** - Joining strings together:
    ```php
@@ -351,7 +351,7 @@ In this example, `$greeting` is a string variable that holds the text `"Hello, W
 
 In this example, `$greeting` demonstrates various string operations like concatenation, finding the length, replacing text within the string, changing case, and extracting a substring. These operations are common in PHP programming, especially when dealing with text processing and manipulation.
 
-## More about String Concatenation
+### More about String Concatenation
 
 String concatenation in PHP is joining one or more strings together. PHP uses the dot `.` operator for concatenation. You can concatenate strings enclosed in single quotes `' '` or double quotes `" "`. Here are three examples demonstrating these concepts:
 
@@ -432,6 +432,66 @@ In this example, `$integerNumber` is an integer variable that holds the value `1
    ```
 
 In these examples, `$integerNumber` and `$floatingNumber` demonstrate various operations like arithmetic calculations, incrementing/decrementing, rounding, and generating random numbers. These operations are commonly used in PHP programming for handling numerical data and calculations.
+
+## Working with Arrays
+
+Arrays in PHP are used to store multiple values in a single variable, making them extremely useful for handling collections of data. Here’s a basic example of creating an array in PHP and performing some common operations with it:
+
+### Creating an Array
+
+```php
+ // Creating an array
+ $fruits = array("Apple", "Banana", "Cherry");
+```
+
+In this example, `$fruits` is an array that contains three elements: "Apple", "Banana", and "Cherry".
+
+### Basic Array Operations
+
+**Accessing Array Elements** - Getting a value from an array by its index:
+   ```php
+    echo $fruits[0]; // Outputs: Apple
+   ```
+
+**Adding Elements to an Array** - Appending elements to an array:
+   ```php
+    $fruits[] = "Durian"; // Adds "Durian" to the end of the array
+   ```
+
+**Counting Elements in an Array** - Finding out how many elements an array contains:
+   ```php
+    $numberOfFruits = count($fruits); // Outputs: 4
+   ```
+
+**Iterating Over an Array** - Using a loop to go through each element in the array:
+   ```php
+    foreach ($fruits as $fruit) {
+        echo $fruit . "<br>";
+    }
+    // This will output:
+    // Apple
+    // Banana
+    // Cherry
+    // Durian
+   ```
+
+**Modifying Array Elements** - Changing the value of an array element:
+   ```php
+    $fruits[1] = "Blueberry"; // Changes "Banana" to "Blueberry"
+   ```
+
+**Sorting Arrays** - Sorting the elements of an array:
+   ```php
+    sort($fruits); // Sorts the array in alphabetical order
+   ```
+
+**Associative Arrays** - Creating and using an associative array (with named keys):
+   ```php
+    $ages = array("Peter" => 20, "John" => 30, "Mary" => 25);
+    echo "Age of John is " . $ages["John"]; // Outputs: Age of John is 30
+   ```
+
+In these examples, `$fruits` and `$ages` are used to demonstrate how arrays can be created, accessed, modified, and iterated over in PHP. Arrays are a fundamental part of PHP programming and are used for a wide range of tasks, including collecting data sets, passing multiple parameters to functions, and much more.
 
 ## Control statements
 
