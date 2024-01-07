@@ -246,7 +246,7 @@ Checks if the value on the left is greater than or equal to the value on the rig
    }
   ```
 
-**8. Less Than or Equal To `<=`**
+**Less Than or Equal To `<=`**
 
 Checks if the value on the left is less than or equal to the value on the right.
 
@@ -299,7 +299,7 @@ Using double quotes `" "` allows for variable interpolation:
 Combining both single and double quotes in concatenation:
 
   ```php
-   /* In this example, single quotes are used for the string literals, and variables are concatenated using the `.` operator. This approach is useful when you want to prevent variable interpolation in certain parts of the string. */
+   /* In this example, single quotes are used for the string literals, and variables are concatenated using the `.` operator. This approach is useful when preventing variable interpolation in certain parts of the string. */
 
    $item = "apple";
    $quantity = 3;
@@ -395,6 +395,41 @@ The `if-elseif-else` statement is used to specify several conditions to check, e
     }
     // Outputs: Grade: C
     ?>
+   ```
+## Using the ternary operator
+
+   The ternary operator in PHP is a shorthand for the `if-else` statement.
+   It is used to execute different code based on the evaluation of a condition.
+   The syntax of the ternary operator is:
+    
+      condition ? exprIfTrue : exprIfFalse;
+
+**Basic Usage**:
+   ```php
+   //In this example, `$isAdult` will be `"Yes"` if `$age` is greater than or equal to 18, and `"No"` otherwise.
+   $age = 20;
+   $isAdult = ($age >= 18) ? "Yes" : "No";
+   echo $isAdult; // Outputs: Yes
+   ```
+
+**Nested Ternary**:
+   ```php
+   //Here, we use a nested ternary operator to determine a grade based on the score. If `$score` is 90 or above, `$grade` is "A". If it's between 80 and 89, `$grade` is "B". Otherwise, it's "C".
+   $score = 85;
+   $grade = ($score >= 90) ? "A" : (($score >= 80) ? "B" : "C");
+   echo $grade; // Outputs: B
+   ```
+
+**Using Ternary with Functions**:
+   ```php
+   //In this example, if `$user` is "Alice", it calls the `greet` function with `$user` as a parameter. If `$user` is not "Alice", it outputs "Unknown user".
+   $user = "Alice";
+   echo ($user === "Alice") ? greet($user) : "Unknown user";
+
+   function greet($name) {
+       return "Hello, " . $name;
+   }
+   // Outputs: Hello, Alice
    ```
 
 ## Database Connectivity
@@ -659,39 +694,3 @@ If you have a specific timestamp, you can format it using the `date()` function.
     // Parse JSON
     $parsedArray = json_decode($json, true);
   ```
-
-## Using the ternary operator
-
-   The ternary operator in PHP is a shorthand for the `if-else` statement.
-   It is used to execute different code based on the evaluation of a condition.
-   The syntax of the ternary operator is:
-    
-      condition ? exprIfTrue : exprIfFalse;
-
-**Basic Usage**:
-   ```php
-   //In this example, `$isAdult` will be `"Yes"` if `$age` is greater than or equal to 18, and `"No"` otherwise.
-   $age = 20;
-   $isAdult = ($age >= 18) ? "Yes" : "No";
-   echo $isAdult; // Outputs: Yes
-   ```
-
-**Nested Ternary**:
-   ```php
-   //Here, we use a nested ternary operator to determine a grade based on the score. If `$score` is 90 or above, `$grade` is "A". If it's between 80 and 89, `$grade` is "B". Otherwise, it's "C".
-   $score = 85;
-   $grade = ($score >= 90) ? "A" : (($score >= 80) ? "B" : "C");
-   echo $grade; // Outputs: B
-   ```
-
-**Using Ternary with Functions**:
-   ```php
-   //In this example, if `$user` is "Alice", it calls the `greet` function with `$user` as a parameter. If `$user` is not "Alice", it outputs "Unknown user".
-   $user = "Alice";
-   echo ($user === "Alice") ? greet($user) : "Unknown user";
-
-   function greet($name) {
-       return "Hello, " . $name;
-   }
-   // Outputs: Hello, Alice
-   ```
