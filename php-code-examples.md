@@ -1,6 +1,8 @@
 # PHP code examples:
 
-Commenting code is an important practice in programming, allowing developers to annotate sections of code for readability and maintainability. PHP supports single-line comments, multi-line comments, and documentation comments. Here are three examples illustrating each type:
+## Commenting code
+
+Commenting code is an important practice in programming, allowing developers to annotate code sections for readability and maintainability. PHP supports single-line comments, multi-line comments, and documentation comments. Here are three examples illustrating each type:
 
 ### Single-Line Comments
 
