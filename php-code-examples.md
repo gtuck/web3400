@@ -1037,9 +1037,9 @@ When you want to end a session and clear all session data, use `session_destroy(
 
 This example demonstrates a basic usage of PHP sessions. Sessions are widely used for maintaining user state and data across page loads, making them essential for user authentication systems and any application that requires data to persist across multiple pages.
 
-##Baking Cookies
+## Baking Cookies
 
-Cookies in PHP are small pieces of data that are stored on the client's computer. They are typically used to remember information about the user for the duration of their visit or repeat visits. Here's a basic example of creating and working with cookies in PHP:
+Cookies in PHP are small pieces of data stored on the client's computer. They are typically used to remember information about the user for the duration of their visit or repeat visits. Here's a basic example of creating and working with cookies in PHP:
 
 **Setting a Cookie**
 
@@ -1092,13 +1092,13 @@ To delete a cookie, use the `setcookie()` function with an expiration date in th
 - The `setcookie()` function must be called before any output is sent to the browser.
 - Cookies are part of the HTTP header, so `setcookie()` must be called before HTML tags.
 - The value of the cookie is stored on the client's machine and can be manipulated by the client, so do not store sensitive information in cookies.
-- Cookies might not be immediately available after they are set because the client needs to send them back to the server with the next HTTP request.
+- Cookies might not be immediately available after they are set because the client needs to send them back to the server with the following HTTP request.
 
-These examples cover the basic operations you can perform with cookies in PHP - setting, accessing, modifying, and deleting them. Cookies are a fundamental part of web development for storing user preferences, tracking user sessions, and managing user data across different website pages.
+These examples cover the basic operations you can perform with cookies in PHP - setting, accessing, modifying, and deleting them. Cookies are fundamental to web development for storing user preferences, tracking user sessions, and managing user data across different website pages.
 
 ## Working with JSON data
 
-Working with JSON (JavaScript Object Notation) data in PHP is quite common, especially in web development for APIs, configurations, and data exchange between a server and a client. JSON is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate.
+Working with JSON (JavaScript Object Notation) data in PHP is quite common, especially in web development for APIs, configurations, and data exchange between a server and a client. JSON is a lightweight data-interchange format that is easy for humans to read and write and for machines to parse and generate.
 
 Here's a basic example of creating and working with JSON data in PHP:
 
@@ -1143,7 +1143,7 @@ Next, let's take a JSON string and convert it into a PHP array:
  echo "Age: " . $userArray['age'];
 ```
 
-This script will output:
+This script will output the following:
 
 ```
  Name: Jane Doe
@@ -1153,8 +1153,8 @@ This script will output:
 
 **JSON Notes:**
 
-- `json_encode()` is used to encode a PHP array (or object) into a JSON string.
-- `json_decode()` is used to decode a JSON string into a PHP array. By setting the second parameter to `true`, the function will return an associative array; otherwise, it returns an object.
+- `json_encode()` encodes a PHP array (or object) into a JSON string.
+- `json_decode()` decodes a JSON string into a PHP array. By setting the second parameter to `true`, the function will return an associative array; otherwise, it returns an object.
 - JSON is a standard format widely used for web applications, APIs, and configurations.
 
-These examples demonstrate how to convert between PHP arrays and JSON strings, a common requirement in modern web development and data handling.
+These examples demonstrate converting between PHP arrays and JSON strings, a common requirement in modern web development and data handling.
