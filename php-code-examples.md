@@ -496,6 +496,59 @@ The `if-elseif-else` statement is used to specify several conditions to check, e
     $stmt->execute(['value1']);
    ```
 
+## Examples of blending PHP and HTML to display records
+
+Using `foreach` syntax in PHP, which utilizes a colon `:` and `endforeach;`, can make the code more readable, especially in templates or embedded HTML. Here are the same three examples of outputting data from a PDO recordset, reformatted using this style:
+
+**Output in HTML Text Format**
+
+Displaying each record's information in plain HTML text format:
+
+ ```php
+  <?php foreach ($records as $record) : ?>
+      Name: <?php echo $record['name']; ?>, Email: <?php echo $record['email']; ?><br>
+  <?php endforeach; ?>
+ ```
+
+**Output in an HTML Table**
+
+Creating a table to present the data in a structured format:
+
+ ```php
+  <table border="1">
+      <tr>
+          <th>Name</th>
+          <th>Email</th>
+      </tr>
+      <?php foreach ($records as $record) : ?>
+          <tr>
+              <td><?php echo $record['name']; ?></td>
+              <td><?php echo $record['email']; ?></td>
+          </tr>
+      <?php endforeach; ?>
+  </table>
+ ```
+
+Each user's name and email are displayed in separate table rows in this example.
+
+**Output in an HTML List**
+
+Using an unordered list to display each record:
+
+ ```php
+  <ul>
+      <?php foreach ($records as $record) : ?>
+          <li>Name: <?php echo $record['name']; ?>, Email: <?php echo $record['email']; ?></li>
+      <?php endforeach; ?>
+  </ul>
+ ```
+
+This code creates an unordered list where each user's name and email are shown as list items.
+
+---
+
+In these examples, `$records` represents the PDO recordset obtained from a database query. The `foreach` loop iterates over each row in the recordset, and the data is inserted into HTML elements for display. The exact structure of `$record` (`$record['name']`, `$record['email']`) depends on the columns returned by your SQL query. The syntax used here is particularly well suited for templates or mixed PHP/HTML code, as it improves readability.
+
 ## Other Database operations
 
 **Retrieve Number of Affected Rows**
