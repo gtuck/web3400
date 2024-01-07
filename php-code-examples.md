@@ -91,9 +91,9 @@ PHP provides specific functions to check a variable's type:
 - `is_resource($value)`: Checks if the value is a resource.
 - `is_null($value)`: Determines if the value is NULL.
 
-Assignment operators in PHP are used to write a value to a variable. The basic assignment operator is `=`, but there are several others that combine assignment with arithmetic or string operations. Let's go through some examples to illustrate these operators:
-
 ## Basic PHP assignment operators:
+
+Assignment operators in PHP are used to write a value to a variable. The basic assignment operator is `=`, but there are several others that combine assignment with arithmetic or string operations. Let's go through some examples to illustrate these operators:
 
 **Assignment Operator `=`**
 
