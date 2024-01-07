@@ -547,7 +547,7 @@ This code creates an unordered list where each user's name and email are shown a
 
 ---
 
-In these examples, `$records` represents the PDO recordset obtained from a database query. The `foreach` loop iterates over each row in the recordset, and the data is inserted into HTML elements for display. The exact structure of `$record` (`$record['name']`, `$record['email']`) depends on the columns returned by your SQL query. The syntax used here is particularly well suited for templates or mixed PHP/HTML code, as it improves readability.
+In these examples, `$records` represents the PDO recordset obtained from a database query. The `foreach` loop iterates over each row in the recordset, and the data is inserted into HTML elements for display. The exact structure of `$record` (`$record['name']`, `$record['email']`) depends on the columns returned by your SQL query.
 
 ## Other Database operations
 
