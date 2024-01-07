@@ -53,9 +53,9 @@ Documentation comments (or DocComments) are a special type of comment that's use
 
 DocComments are particularly useful in large projects and frameworks, where automated documentation generation becomes a crucial part of the workflow.
 
-## PHP data types:
+## Basic data types:
 
-PHP data types are not explicitly declared; they are determined at runtime based on the context. In other words, PHP is a Dynamically Typed Language.
+PHP data types are not explicitly declared; they are determined at runtime based on the context. In other words, PHP is a *Dynamically Typed Language*.
 
 - **Boolean (bool)**: Represents true or false.
 - **Integer (int)**: A whole number.
@@ -389,9 +389,9 @@ Using double quotes `" "` allows for variable interpolation:
    // Outputs: New York, USA
   ```
 
-## Conditional statements
+## Control statements
 
-Conditional statements are crucial to any programming language, including PHP, as they allow you to perform different actions based on different conditions. Here are three examples demonstrating the use of `if`, `if-else`, and `if-elseif-else` in PHP:
+Control statements are crucial to any programming language, including PHP, as they allow you to perform various actions based on different conditions. Here are three examples demonstrating the use of `if`, `if-else`, and `if-elseif-else` in PHP:
 
 **Using `if` Statement**
 
@@ -486,7 +486,7 @@ The `if-elseif-else` statement is used to specify several conditions to check, e
 
 ## Switch statement
 
-The `switch` statement in PHP is used to perform different actions based on different conditions. It's similar to a series of `if` statements but is often more concise and easier to read, particularly when you have a number of different conditions to check against the same value. Here's an example of a `switch` statement:
+The `switch` statement in PHP is used to perform different actions based on different conditions. It's similar to a series of `if` statements but is often more concise and easier to read, particularly when you have several different conditions to check against the same value. Here's an example of a `switch` statement:
 
 **Example: `switch` Statement to Display a Weekday**
 
