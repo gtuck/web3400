@@ -1,5 +1,47 @@
 # PHP code examples:
 
+## PHP data types:
+
+PHP data types are not explicitly declared; they are determined at runtime based on the context. In other words, PHP is a Dynamicly Typed Language.
+
+- **Boolean (bool)**: Represents true or false.
+- **Integer (int)**: A whole number.
+- **Floating Point Number (float)**: A number with decimals.
+- **String**: A sequence of characters.
+- **Array**: A collection of key-value pairs in a specific order.
+- **Object**: An entity created from a predefined class.
+- **Callable**: A reference to a function in PHP.
+- **Iterable**: Any array or object compatible with the Traversable interface.
+- **Resource**: A link to an external resource.
+- **NULL**: A variable without any value.
+
+There are multiple methods to identify a variable's type.
+
+**Identifying Type and Value**
+
+- **Using var_dump()**: This function displays a variable's type and value.
+
+  Example:
+  ```php
+   $text = "PHP";
+   var_dump($text);
+   // Output: string(3) "PHP"
+  ```
+
+**Type Checking Functions**
+
+PHP provides specific functions to check a variable's type:
+
+- `is_bool($value)`: Checks if the value is a boolean.
+- `is_int($value)`: Verifies if the value is an integer (also `is_integer()`).
+- `is_float($value)`: Determines if the value is a floating-point number.
+- `is_string($value)`: Confirms if the value is a string.
+- `is_array($value)`: Checks if the value is an array.
+- `is_object($value)`: Asserts if the value is an object.
+- `is_iterable($value)`: Verifies if the value is iterable.
+- `is_resource($value)`: Checks if the value is a resource.
+- `is_null($value)`: Determines if the value is NULL.
+
 ## Creating & using variables
 
 Creating and using variables in PHP is a fundamental part of programming in this language. Variables in PHP are used to store data, like strings, integers, arrays, etc., and they start with a `$` sign. Here are three examples that illustrate different ways of creating and using variables in PHP:
@@ -50,48 +92,6 @@ Creating and using variables in PHP is a fundamental part of programming in this
     echo "The first color is " . $colors[0] . ", and the third color is " . $colors[2];
     // Outputs: The first color is Red, and the third color is Blue
    ```
-
-## PHP data types:
-
-PHP data types are not explicitly declared; they are determined at runtime based on the context. In other words, PHP is a Dynamicly Typed Language.
-
-- **Boolean (bool)**: Represents true or false.
-- **Integer (int)**: A whole number.
-- **Floating Point Number (float)**: A number with decimals.
-- **String**: A sequence of characters.
-- **Array**: A collection of key-value pairs in a specific order.
-- **Object**: An entity created from a predefined class.
-- **Callable**: A reference to a function in PHP.
-- **Iterable**: Any array or object compatible with the Traversable interface.
-- **Resource**: A link to an external resource.
-- **NULL**: A variable without any value.
-
-There are multiple methods to identify a variable's type.
-
-**Identifying Type and Value**
-
-- **Using var_dump()**: This function displays a variable's type and value.
-
-  Example:
-  ```php
-   $text = "PHP";
-   var_dump($text);
-   // Output: string(3) "PHP"
-  ```
-
-**Type Checking Functions**
-
-PHP provides specific functions to check a variable's type:
-
-- `is_bool($value)`: Checks if the value is a boolean.
-- `is_int($value)`: Verifies if the value is an integer (also `is_integer()`).
-- `is_float($value)`: Determines if the value is a floating-point number.
-- `is_string($value)`: Confirms if the value is a string.
-- `is_array($value)`: Checks if the value is an array.
-- `is_object($value)`: Asserts if the value is an object.
-- `is_iterable($value)`: Verifies if the value is iterable.
-- `is_resource($value)`: Checks if the value is a resource.
-- `is_null($value)`: Determines if the value is NULL.
 
 ## Basic PHP assignment operators:
 
