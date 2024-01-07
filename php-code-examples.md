@@ -1031,21 +1031,80 @@ When you want to end a session and clear all session data, use `session_destroy(
 
 **Session Notes**
 
-- `session_start()` must be the very first thing in your document. Before any HTML tags.
+- `session_start()` must be your document's first thing. Before any HTML tags.
 - Sessions are ideal for sensitive data like user login information, as they are stored on the server.
 - The session data will remain available as long as the browser is open and the session hasn't been explicitly destroyed.
 
 This example demonstrates a basic usage of PHP sessions. Sessions are widely used for maintaining user state and data across page loads, making them essential for user authentication systems and any application that requires data to persist across multiple pages.
 
+##Baking Cookies
+
+Cookies in PHP are small pieces of data that are stored on the client's computer. They are typically used to remember information about the user for the duration of their visit or repeat visits. Here's a basic example of creating and working with cookies in PHP:
+
+**Setting a Cookie**
+
+To set a cookie in PHP, you use the `setcookie()` function. This function must be called before any output is sent to the browser (similar to `session_start()`).
+
+```php
+ // Setting a cookie that expires in 30 days
+ $cookie_name = "user";
+ $cookie_value = "John Doe";
+ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+ 
+ // Note: If this script has any HTML before it, the setcookie() function call will fail.
+```
+
+**Accessing a Cookie**
+
+You can access cookies in PHP using the `$_COOKIE` superglobal array. Remember that a cookie will not be available until the next loading of a page on which the cookie is set.
+
+```php
+ // Check if the cookie is set
+ if(!isset($_COOKIE["user"])) {
+     echo "Cookie named 'user' is not set!";
+ } else {
+     echo "Cookie 'user' is set!<br>";
+     echo "Value is: " . $_COOKIE["user"];
+ }
+```
+
+**Modifying a Cookie**
+
+To modify a cookie, just set the cookie again using the `setcookie()` function with the new value.
+
+```php
+ // Modifying the cookie value
+ $cookie_value = "Jane Doe";
+ setcookie("user", $cookie_value, time() + (86400 * 30), "/");
+```
+
+**Deleting a Cookie**
+
+To delete a cookie, use the `setcookie()` function with an expiration date in the past.
+
+```php
+ // Deleting a cookie
+ setcookie("user", "", time() - 3600, "/");
+```
+
+**Cookie Crumbs (Notes)**
+
+- The `setcookie()` function must be called before any output is sent to the browser.
+- Cookies are part of the HTTP header, so `setcookie()` must be called before HTML tags.
+- The value of the cookie is stored on the client's machine and can be manipulated by the client, so do not store sensitive information in cookies.
+- Cookies might not be immediately available after they are set because the client needs to send them back to the server with the next HTTP request.
+
+These examples cover the basic operations you can perform with cookies in PHP - setting, accessing, modifying, and deleting them. Cookies are a fundamental part of web development for storing user preferences, tracking user sessions, and managing user data across different website pages.
+
 ## Working with JSON data
 
-Working with JSON (JavaScript Object Notation) data in PHP is quite common, especially in web development for APIs, configurations, and data exchange between a server and a client. JSON is a lightweight data-interchange format that is easy for humans to read and write, and easy for machines to parse and generate.
+Working with JSON (JavaScript Object Notation) data in PHP is quite common, especially in web development for APIs, configurations, and data exchange between a server and a client. JSON is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate.
 
 Here's a basic example of creating and working with JSON data in PHP:
 
 **Creating JSON Data**
 
-First, we'll create an associative array in PHP and then convert it to a JSON string.
+First, we'll create an associative array in PHP and then convert it to JSON.
 
 ```php
  // Creating an associative array
