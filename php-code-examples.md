@@ -389,6 +389,50 @@ Using double quotes `" "` allows for variable interpolation:
    // Outputs: New York, USA
   ```
 
+## Working with Numbers
+
+Working with numbers is a fundamental aspect of programming in PHP, as in most programming languages. PHP supports different types of numbers, including integers and floating-point numbers (or doubles). Here's a basic example of creating number variables in PHP and performing some common operations with them:
+
+### Creating Number Variables
+
+```php
+ // Creating integer and floating-point number variables
+ $integerNumber = 10;
+ $floatingNumber = 20.5;
+```
+
+In this example, `$integerNumber` is an integer variable that holds the value `10`, and `$floatingNumber` is a floating-point number that holds the value `20.5`.
+
+**Basic Number Operations**
+
+**Arithmetic Operations** - Performing calculations like addition, subtraction, multiplication, and division:
+   ```php
+    $sum = $integerNumber + $floatingNumber; // Addition, Outputs: 30.5
+    $difference = $floatingNumber - $integerNumber; // Subtraction, Outputs: 10.5
+    $product = $integerNumber * 2; // Multiplication, Outputs: 20
+    $quotient = $floatingNumber / $integerNumber; // Division, Outputs: 2.05
+   ```
+
+**Increment and Decrement** - Increasing or decreasing a number by one:
+   ```php
+    $integerNumber++; // Increment, $integerNumber is now 11
+    $integerNumber--; // Decrement, $integerNumber is back to 10
+   ```
+
+**Rounding Numbers** - Rounding floating-point numbers:
+   ```php
+    $roundedNumber = round($floatingNumber); // Round to nearest whole number, Outputs: 21
+    $floorNumber = floor($floatingNumber); // Round down, Outputs: 20
+    $ceilNumber = ceil($floatingNumber); // Round up, Outputs: 21
+   ```
+
+**Working with Random Numbers** - Generating random numbers:
+   ```php
+    $randomNumber = rand(1, 100); // Random number between 1 and 100
+   ```
+
+In these examples, `$integerNumber` and `$floatingNumber` demonstrate various operations like arithmetic calculations, incrementing/decrementing, rounding, and generating random numbers. These operations are commonly used in PHP programming for handling numerical data and calculations.
+
 ## Control statements
 
 Control statements are crucial to any programming language, including PHP, as they allow you to perform various actions based on different conditions. Here are three examples demonstrating the use of `if`, `if-else`, and `if-elseif-else` in PHP:
