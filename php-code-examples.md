@@ -1,6 +1,6 @@
 # PHP code examples:
 
-### Creating & using variables
+## Creating & using variables
 
 Creating and using variables in PHP is a fundamental part of programming in this language. Variables in PHP are used to store data, like strings, integers, arrays, etc., and they start with a `$` sign. Here are three examples that illustrate different ways of creating and using variables in PHP:
 
@@ -50,7 +50,7 @@ Creating and using variables in PHP is a fundamental part of programming in this
     echo "The first color is " . $colors[0] . ", and the third color is " . $colors[2];
     // Outputs: The first color is Red, and the third color is Blue
    ```
-### String concatenation
+## String concatenation
 
 String concatenation in PHP is the process of joining one or more strings together. PHP uses the dot `.` operator for concatenation. You can concatenate strings enclosed in either single quotes `' '` or double quotes `" "`. Here are three examples demonstrating these concepts:
 
@@ -105,7 +105,7 @@ Combining both single and double quotes in concatenation:
    // Outputs: You have 3 apples.
   ```
 
-### Conditional statements
+## Conditional statements
 
 Conditional statements are a crucial part of any programming language, including PHP, as they allow you to perform different actions based on different conditions. Here are three examples demonstrating the use of `if`, `if-else`, and `if-elseif-else` in PHP:
 
@@ -165,7 +165,7 @@ The `if-elseif-else` statement is used to specify several conditions to check, e
     ?>
    ```
 
-### Database Connectivity
+## Database Connectivity
 
 **Use PDO to connect to a database then use a try/catch to test the connection**
    ```php
@@ -194,7 +194,7 @@ The `if-elseif-else` statement is used to specify several conditions to check, e
     $pdo = pdo_connect_mariadb();
    ```
 
-### Database CRUD operations
+## Database CRUD operations
 
 **Create (INSERT)**
    ```php
@@ -232,7 +232,7 @@ The `if-elseif-else` statement is used to specify several conditions to check, e
     $stmt->execute(['value1']);
    ```
 
-### Other Database operations
+## Other Database operations
 
 **Retrieve Number of Affected Rows**
    ```php
@@ -249,7 +249,7 @@ The `if-elseif-else` statement is used to specify several conditions to check, e
     They are closed automatically when the variable is no longer in use.
    ```
 
-### Working with Strings
+## Working with Strings
 
 **Replace Text in a String**
    ```php
@@ -275,7 +275,7 @@ The `if-elseif-else` statement is used to specify several conditions to check, e
     }
    ```
 
-### Working with Arrays
+## Working with Arrays
 
 **Creating an Array**
    ```php
@@ -351,7 +351,7 @@ The `if-elseif-else` statement is used to specify several conditions to check, e
     $commaSeparatedList = implode(',', $array);
    ```
 
-### GET and POST Requests
+## GET and POST Requests
 **Check if the $_GET Request Variable Exists**
    ```php
     if (isset($_GET['param'])) {
@@ -366,7 +366,7 @@ The `if-elseif-else` statement is used to specify several conditions to check, e
     }
    ```
 
-### Working with Password Hashing
+## Working with Password Hashing
 **Create a Password Hash**
    ```php
     $hash = password_hash("password", PASSWORD_DEFAULT);
@@ -381,7 +381,7 @@ The `if-elseif-else` statement is used to specify several conditions to check, e
     }
    ```
 
-### Session Handling
+## Session Handling
 **Create a New Session**
    ```php
     session_start();
@@ -397,20 +397,20 @@ The `if-elseif-else` statement is used to specify several conditions to check, e
     session_destroy();
    ```
 
-### Introduction to the header() Function
+## Introduction to the header() Function
 **Redirect the URL**
    ```php
     header("Location: https://www.example.com");
     exit();
    ```
 
-### Determining the Current Date
+## Determining the Current Date
 **Get the Date from a Timestamp:**
    ```php
     echo date("Y-m-d H:i:s");
    ```
 
-### Create and Parse JSON
+## Create and Parse JSON
    ```php
     // Create JSON
     $array = ['key' => 'value'];
@@ -420,7 +420,7 @@ The `if-elseif-else` statement is used to specify several conditions to check, e
     $parsedArray = json_decode($json, true);
   ```
 
-### Using the ternary operator
+## Using the ternary operator
 
    The ternary operator in PHP is a shorthand for the `if-else` statement.
    It is used to execute different code based on the evaluation of a condition.
