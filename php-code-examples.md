@@ -1,10 +1,10 @@
-## PHP code samples:
+# PHP code examples:
 
 ### Creating & using variables
 
 Creating and using variables in PHP is a fundamental part of programming in this language. Variables in PHP are used to store data, like strings, integers, arrays, etc., and they start with a `$` sign. Here are three examples that illustrate different ways of creating and using variables in PHP:
 
-**Example 1: Working with Strings**
+**Example 1: Working with variables**
 
    ```php
     /* In this example, a string variable `$name` is created and assigned the value 
@@ -50,6 +50,61 @@ Creating and using variables in PHP is a fundamental part of programming in this
     echo "The first color is " . $colors[0] . ", and the third color is " . $colors[2];
     // Outputs: The first color is Red, and the third color is Blue
    ```
+### String concatenation
+
+String concatenation in PHP is the process of joining one or more strings together. PHP uses the dot `.` operator for concatenation. You can concatenate strings enclosed in either single quotes `' '` or double quotes `" "`. Here are three examples demonstrating these concepts:
+
+**Example 1: Concatenation with Single Quotes**
+
+Using single quotes `' '` for string literals:
+
+  ```php
+   /* In this example, two string variables `$firstName` and `$lastName` are concatenated with a space in between, using single quotes. */
+
+   $firstName = 'John';
+   $lastName = 'Doe';
+
+   // Concatenation with single quotes
+   $fullName = $firstName . ' ' . $lastName;
+
+   echo $fullName;
+   // Outputs: John Doe
+  ```
+
+**Example 2: Concatenation with Double Quotes**
+
+Using double quotes `" "` allows for variable interpolation:
+
+  ```php
+   /* Here, `$city` and `$country` are enclosed in double quotes. PHP automatically interpolates the variables within the string. */
+
+   $city = "New York";
+   $country = "USA";
+
+   // Concatenation with double quotes
+   $location = "$city, $country";
+
+   echo $location;
+   // Outputs: New York, USA
+  ```
+
+**Example 3: Mixed Usage of Single and Double Quotes**
+
+Combining both single and double quotes in concatenation:
+
+  ```php
+   /* In this example, single quotes are used for the string literals, and variables are concatenated using the `.` operator. This approach is useful when you want to prevent variable interpolation in certain parts of the string. */
+
+   $item = "apple";
+   $quantity = 3;
+
+   // Mixed usage of single and double quotes
+   $message = 'You have ' . $quantity . ' ' . $item . 's.';
+
+   echo $message;
+   // Outputs: You have 3 apples.
+  ```
+
 ### Conditional statements
 
 Conditional statements are a crucial part of any programming language, including PHP, as they allow you to perform different actions based on different conditions. Here are three examples demonstrating the use of `if`, `if-else`, and `if-elseif-else` in PHP:
