@@ -482,9 +482,49 @@ The `if-elseif-else` statement is used to specify several conditions to check, e
    // Outputs: Hello, Alice
    ```
 
+## Switch statement
+
+The `switch` statement in PHP is used to perform different actions based on different conditions. It's similar to a series of `if` statements but is often more concise and easier to read, particularly when you have a number of different conditions to check against the same value. Here's an example of a `switch` statement:
+
+**Example: `switch` Statement to Display a Weekday**
+
+Suppose you want to display the name of a weekday based on a numeric input (where `1` is Monday, `2` is Tuesday, and so on).
+
+```php
+ $dayNumber = 4;
+ 
+ switch ($dayNumber) {
+     case 1:
+         echo "Monday";
+         break;
+     case 2:
+         echo "Tuesday";
+         break;
+     case 3:
+         echo "Wednesday";
+         break;
+     case 4:
+         echo "Thursday"; // This will be executed
+         break;
+     case 5:
+         echo "Friday";
+         break;
+     case 6:
+         echo "Saturday";
+         break;
+     case 7:
+         echo "Sunday";
+         break;
+     default:
+         echo "Invalid day number";
+ }
+```
+
+In this example, the `switch` statement is used to check the value of `$dayNumber`. Each `case` represents a possible value of `$dayNumber`, and the corresponding code block is executed if `$dayNumber` matches that case. The `break` statement prevents the code from running into the next case accidentally. The `default` case is executed if none of the cases match the value of `$dayNumber`. In this scenario, since `$dayNumber` is `4`, the output will be `"Thursday"`.
+
 ## Database Connectivity
 
-**Use PDO to connect to a database then use a try/catch to test the connection**
+**Use PDO to connect to a database, then use a try/catch to test the connection**
    ```php
     function pdo_connect_mariadb()
     {
@@ -749,7 +789,7 @@ In these examples, `$records` represents the PDO recordset obtained from a datab
    ```
 
 ## Working with the PHP Date function
-The `date()` function in PHP is used to format a local date and time, and it is extremely useful for all kinds of date-related operations. Here are three common examples of working with the `date()` function in PHP:
+The `date()` function in PHP is used to format a local date and time, and it is beneficial for all kinds of date-related operations. Here are three common examples of working with the `date()` function in PHP:
 
 **Example 1: Displaying the Current Date**
 
