@@ -974,7 +974,7 @@ This basic example demonstrates creating a simple HTML form and processing its d
     }
    ```
 
-## Session Handling
+## Working with Sessions
 
 PHP sessions are a way to store information (in variables) to be used across multiple pages. Unlike cookies, session data is stored on the server. Sessions are commonly used to retain user information across different pages for a single visit (session).
 
