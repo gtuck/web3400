@@ -2,7 +2,7 @@
 
 ## PHP data types:
 
-PHP data types are not explicitly declared; they are determined at runtime based on the context. In other words, PHP is a Dynamicly Typed Language.
+PHP data types are not explicitly declared; they are determined at runtime based on the context. In other words, PHP is a Dynamically Typed Language.
 
 - **Boolean (bool)**: Represents true or false.
 - **Integer (int)**: A whole number.
