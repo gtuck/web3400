@@ -53,16 +53,16 @@ Creating and using variables in PHP is a fundamental part of programming in this
 
 ## Basic PHP data types:
 
-1. **Boolean (bool)**: Represents true or false.
-2. **Integer (int)**: A whole number.
-3. **Floating Point Number (float)**: A number with decimals.
-4. **String**: A sequence of characters.
-5. **Array**: A collection of key-value pairs in a specific order.
-6. **Object**: An entity created from a predefined class.
-7. **Callable**: A reference to a function in PHP.
-8. **Iterable**: Any array or object compatible with the Traversable interface.
-9. **Resource**: A link to an external resource.
-10. **NULL**: A variable without any value.
+- **Boolean (bool)**: Represents true or false.
+- **Integer (int)**: A whole number.
+- **Floating Point Number (float)**: A number with decimals.
+- **String**: A sequence of characters.
+- **Array**: A collection of key-value pairs in a specific order.
+- **Object**: An entity created from a predefined class.
+- **Callable**: A reference to a function in PHP.
+- **Iterable**: Any array or object compatible with the Traversable interface.
+- **Resource**: A link to an external resource.
+- **NULL**: A variable without any value.
 
 PHP data types are not explicitly declared; rather, they are determined at runtime based on the context. There are multiple methods to identify a variable's type.
 
