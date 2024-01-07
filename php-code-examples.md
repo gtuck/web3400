@@ -91,6 +91,77 @@ PHP provides specific functions to check a variable's type:
 - `is_resource($value)`: Checks if the value is a resource.
 - `is_null($value)`: Determines if the value is NULL.
 
+Assignment operators in PHP are used to write a value to a variable. The basic assignment operator is `=`, but there are several others that combine assignment with arithmetic or string operations. Let's go through some examples to illustrate these operators:
+
+## Basic PHP assignment operators:
+
+**Assignment Operator `=`**
+
+The `=` operator assigns the value on the right to the variable on the left.
+
+  ```php
+   $number = 10; // Assigns 10 to $number
+   $text = "Hello, PHP!"; // Assigns the string "Hello, PHP!" to $text
+  ```
+
+**Arithmetic Assignment Operators**
+
+These operators combine arithmetic operations with assignments.
+
+**Addition Assignment `+=`**
+
+Adds the right-hand operand to the left-hand operand and assigns the result to the left-hand operand.
+
+  ```php
+   $a = 10;
+   $a += 5; // Equivalent to $a = $a + 5; Now $a is 15
+  ```
+
+**Subtraction Assignment `-=`**
+
+Subtracts the right-hand operand from the left-hand operand and assigns the result to the left-hand operand.
+
+  ```php
+   $a = 10;
+   $a -= 5; // Equivalent to $a = $a - 5; Now $a is 5
+  ```
+
+**Multiplication Assignment `*=`**
+
+Multiplies the right-hand operand with the left-hand operand and assigns the result to the left-hand operand.
+
+  ```php
+   $a = 10;
+   $a *= 2; // Equivalent to $a = $a * 2; Now $a is 20
+  ```
+
+**Division Assignment `/=`**
+
+Divides the left-hand operand by the right-hand operand and assigns the result to the left-hand operand.
+
+  ```php
+   $a = 10;
+   $a /= 2; // Equivalent to $a = $a / 2; Now $a is 5
+  ```
+
+**Modulus Assignment `%=`**
+
+Takes modulus using two operands and assigns the result to the left-hand operand.
+
+  ```php
+   $a = 10;
+   $a %= 3; // Equivalent to $a = $a % 3; Now $a is 1
+  ```
+
+**String Concatenation Assignment Operator `.=`**
+
+Concatenates the right-hand operand to the left-hand operand and assigns the result to the left-hand operand.
+
+  ```php
+   $text = "Hello, ";
+   $text .= "World!"; // Equivalent to $text = $text . "World!"; Now $text is "Hello, World!"
+  ```
+
 ## String concatenation
 
 String concatenation in PHP is joining one or more strings together. PHP uses the dot `.` operator for concatenation. You can concatenate strings enclosed in single quotes `' '` or double quotes `" "`. Here are three examples demonstrating these concepts:
