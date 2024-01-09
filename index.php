@@ -1,6 +1,27 @@
 <?php
-// function to connect to our MariaDB instance
 
-// Create a PDO databse connection object by calling our pdo_connect_mariadb function
+function listFolderFiles($dir){
+    $files = scandir($dir);
 
-// Display the PHP server info
+    foreach($files as $file){
+        if ($file != '.' && $file != '..'){
+            echo '<li><a href="' . htmlspecialchars($dir . '/' . $file) . '">' . $file . '</a>';
+
+            if (is_dir($dir . '/' . $file)) {
+                echo '<ul>';
+                listFolderFiles($dir . '/' . $file);
+                echo '</ul>';
+            }
+
+            echo '</li>';
+        }
+    }
+}
+
+$rootFolder = '/'; // Replace with the path to your root folder
+
+echo '<ul>';
+listFolderFiles($rootFolder);
+echo '</ul>';
+
+?>
