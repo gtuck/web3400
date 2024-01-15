@@ -1,5 +1,5 @@
 <?php
-
+// Function to display files in the website root folder as a link tree of linkss
 function listFolderFiles($dir, $rootLength)
 {
     $files = scandir($dir);
