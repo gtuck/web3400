@@ -748,6 +748,88 @@ Suppose you want to display the name of a weekday based on a numeric input (wher
 
 In this example, the `switch` statement is used to check the value of `$dayNumber`. Each `case` represents a possible value of `$dayNumber`, and the corresponding code block is executed if `$dayNumber` matches that case. The `break` statement prevents the code from running into the next case accidentally. The `default` case is executed if none of the cases match the value of `$dayNumber`. In this scenario, since `$dayNumber` is `4`, the output will be `"Thursday"`.
 
+## PHP's `include` and `require` statements
+
+PHP's `include` and `require` statements are used to insert the contents of one PHP file into another PHP file before the server executes it. They are widely used to maintain clean, modular, and reusable code. Here's a basic example of how to use these statements:
+
+Let's assume you have two PHP files: `header.php` and `footer.php`.
+
+**header.php:**
+
+```php
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Page</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Web Page</h1>
+    </header>
+```
+
+**footer.php:**
+
+```php
+    <footer>
+        <p>Footer content here</p>
+    </footer>
+</body>
+</html>
+```
+
+### Main File with `include`
+
+Now, you can create a main PHP file, say `index.php`, where you `include` these files.
+
+**index.php:**
+
+```php
+<?php
+include 'header.php';
+?>
+
+    <div>
+        <p>Main content of the web page here...</p>
+    </div>
+
+<?php
+include 'footer.php';
+?>
+```
+
+### Using `require`
+
+The `require` statement works similarly to `include`, but with one key difference: if the file to be included/required is not found, `require` will cause a fatal error and halt script execution, while `include` will only emit a warning (E_WARNING) and the script will continue.
+
+**index.php** using `require`:
+
+```php
+<?php
+require 'header.php';
+?>
+
+    <div>
+        <p>Main content of the web page here...</p>
+    </div>
+
+<?php
+require 'footer.php';
+?>
+```
+
+### `include_once` and `require_once`
+
+Additionally, you have `include_once` and `require_once`, which are similar to `include` and `require`, respectively. The difference is that if the file has already been included, it will not be included (or required) again.
+
+### Summary
+
+- Use `include` or `require` when you want to reuse code like headers, footers, or common functions across multiple pages.
+- Choose between `include` and `require` based on how you want your script to handle the absence of the included file. Use `require` if the file is essential for the application to run.
+- `include_once` and `require_once` ensure that a file is included only once even if it's called multiple times.
+
+These structures support creating modular, maintainable, and cleaner code in PHP applications.
+
 ## Database Connectivity
 
 **Use PDO to connect to a database, then use a try/catch to test the connection**
