@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@vizuaalog/bulmajs@0/dist/bulma.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
 </head>
 
 <body>
@@ -57,7 +60,7 @@
 
     <!-- BEGIN MAIN PAGE CONTENT -->
     <main>
-        <section>
+        <section class="section">
             <h1>Working with titles</h1>
             <h2>and <strong>subtitles</strong> is a <em>simple</em> way to add context to your message</h2>
             <hr>
@@ -113,7 +116,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="section">
             <h2>Working with tables</h2>
             <table>
                 <thead>
@@ -157,58 +160,63 @@
             </table>
         </section>
 
-        <section>
+        <section class="section">
             <h2>Working with forms</h2>
-            <div>
+            <div class="box">
                 <form action="" method="post">
                     <div>
-                        <label>Name</label>
-                        <div>
-                            <input type="text" placeholder="Your name">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Your name">
                         </div>
                     </div>
-                    <div>
-                        <label>Message</label>
-                        <div>
-                            <textarea placeholder="Your message"></textarea>
+                    <div class="field">
+                        <label class="label">Message</label>
+                        <div class="control">
+                            <textarea class="textarea" placeholder="Your message"></textarea>
                         </div>
                     </div>
-                    <div>
-                        <button>Submit</button>
-                        <button href="#">Cancel</button>
+                    <div class="control">
+                        <button class="button is-primary">Submit</button>
+                        <button class="button is-danger" href="#">Cancel</button>
                     </div>
                 </form>
             </div>
         </section>
-        <section>
-            <div>
+        <section class="section">
+            <div class="block">
                 <h2>Working with Buttons and Hyperlinks</h2>
-                <button href="https://weber.edu">I'm a button link</button>
+                <button class="button is-link" href="https://weber.edu">I'm a button link</button>
             </div>
-            <div>
-                <a href="#">I'm a button with an icon</a>
+            <div class="block">
+                <a href="#">
+                    <span class="icon">
+                        <i class="fas fa-home"></i>
+                    </span>
+                    <span>I'm a button with an icon</span>
+                </a>
             </div>
-            <div>
+            <div class="block">
                 <a href="https://weber.edu">I'm a text link</a>
             </div>
         </section>
 
-        <section>
-            <h2>Working with Messages and Notifictions</h2>
-            <div>
-                <div>
+        <section class="section">
+            <h2 class="title">Working with Messages and Notifictions</h2>
+            <div class="message">
+                <div class="message-header">
                     <p>I'm a message box with a close/exit button</p>
                     <button></button>
                 </div>
-                <div>
+                <div class="message-body">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>,
                     tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam
                     gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>,
                     in mollis lectus. Donec sodales, arcu et sollicitudin porttitor.
                 </div>
             </div>
-            <div>
-                <button></button>
+            <div class="notification is-danger is-light">
+                <button class="delete"></button>
                 <strong>I'm a notification box with a close/exit button.</strong> Primar lorem ipsum dolor sit amet,
                 consectetur adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis
                 placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et
@@ -216,17 +224,17 @@
             </div>
         </section>
 
-        <section>
-            <h2>Working with Images</h2>
+        <section class="section">
+            <h2 class="title">Working with Images</h2>
             <img src="https://source.unsplash.com/random/320x320/?tech" alt="Descriptive text for the image" width="320"
                 height="320">
             <hr>
-            <figure>
+            <figure class="image is-128x128">
                 <img src="https://source.unsplash.com/random/128x128/?fruit">
             </figure>
             <hr>
-            <figure>
-                <img src="https://source.unsplash.com/random/128x128/?face">
+            <figure class="image is-128x128">
+                <img class="is-rounded" src="https://source.unsplash.com/random/128x128/?face">
             </figure>
         </section>
 
@@ -245,4 +253,3 @@
 
 </body>
 
-</html>
