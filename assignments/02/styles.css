@@ -1,7 +1,7 @@
-/*Introduction to CSS */
-
 body {
     font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
 h1 {
@@ -12,18 +12,19 @@ p {
     color: green;
 }
 
-
-/*Text Formatting and Lists with CSS */
-b, strong {
+b,
+strong {
     font-weight: bold;
 }
 
-i, em {
+i,
+em {
     font-style: italic;
 }
 
-ol, ul {
-    list-style-type: none; /* Removes default list styling */
+ol,
+ul {
+    list-style-type: none;
     padding: 0;
 }
 
@@ -31,8 +32,6 @@ li {
     margin-bottom: 5px;
 }
 
-
-/*Styling Hyperlinks and Images*/
 a {
     text-decoration: none;
     color: navy;
@@ -43,35 +42,38 @@ a:hover {
 }
 
 img {
-    width: 400px;
+    width: 100px;
     height: auto;
     border: 1px solid black;
 }
 
-
-/*Styling with HTML5 Semantic Tags*/
-header, footer, nav, main, article, aside {
+header,
+footer,
+nav,
+main,
+article,
+aside {
     border: 1px solid grey;
     margin: 10px;
     padding: 10px;
 }
 
-header, footer {
+header,
+footer {
     background-color: lightgray;
 }
 
 nav {
-    background-color: grey;
+    background-color: lightyellow;
 }
 
-
-/*Styling Tables and Forms*/
 table {
     width: 100%;
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     border: 1px solid black;
     padding: 5px;
     text-align: left;
@@ -81,13 +83,12 @@ form {
     margin: 20px 0;
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
     padding: 10px;
     margin: 5px 0;
 }
-
-
-/* Advanced styling like flexbox or grid layouts can be introduced here */
 
 main {
     display: flex;
