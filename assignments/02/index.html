@@ -1,86 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>My First Webpage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src=""></script>
+    <title>Combined HTML and CSS Sample</title>
 </head>
-<body style="background-color: honeydew;">
+
+<body>
+
     <header>
-    <h1 style="color: greenyellow;">History and Evolution of HTML</h1>
+        <h1>Welcome to HTML and CSS!</h1>
     </header>
-    
+
     <nav>
-        <a href="#" style="color: black;">Home</a> | <a href="#" style="color: black;">About</a>
+        <a href="#">Home</a> | <a href="#">About</a>
     </nav>
 
-    <article>
-    <br>
-    <b style="color: greenyellow;">What is HTML?</b><br>
-    <p style="color: black;">HTML, also known as HyperText Markup Language, stands as the foundation of the World Wide Web, serving as the fundamental language for creating and structuring web content</p>
+    <main>
+        <article>
+            <h2>Formatted Text and Lists</h2>
+            <p>This is a <strong>bold</strong> and <em>italic</em> paragraph.</p>
+            <ol>
+                <li>First Ordered Item</li>
+                <li>Second Ordered Item</li>
+            </ol>
+            <ul>
+                <li>First Unordered Item</li>
+                <li>Second Unordered Item</li>
+            </ul>
 
-    <strong style="color: greenyellow;">When was HTML invented?</strong><br>
-    <p style="color: black;">HTML was originally developed by Tim Berners-Lee around 1990</p>
+            <h2>Hyperlinks and Images</h2>
+            <a href="https://example.com">Visit Example.com</a>
+            <img width="320" src="https://source.unsplash.com/random/900x700/?fruit"
+                alt="Descriptive text for the image">
+        </article>
+        <aside>
+            <p>Related Links</p>
+            <a href="#">Link 1</a>
+        </aside>
+    </main>
+
     <section>
-    <a href="https://www.britannica.com/biography/Tim-Berners-Lee" target="blank" style="color: greenyellow;">Learn more about Tim Berners-Lee</a>
-    <hr>
-    <img width="420" height="315" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Computer">
-    <hr>
+        <h2>Tables and Forms</h2>
+        <table>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+            </tr>
+        </table>
+
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
     </section>
-    <table style="color: black;">
-        <tr style="color: greenyellow;">
-            <th>HTML 1</th>
-            <th>HTML 2</th>
-            <th>HTML 3</th>
-            <th>HTML 4</th>
-            <th>HTML 5</th>
-        </tr>
-        <tr>
-            <td>(1993)</td>
-            <td>(1995)</td>
-            <td>(1997)</td>
-            <td>(1999)</td>
-            <td>(2014)</td>
-        </tr>
-    </table>
 
-    <h2 style="color: greenyellow;">New features of HTML 5</h2>
-    <ol style="color: black;">
-        <li>Audio and video support</li>
-        <li>Canvas element</li>
-        <li>Semantic markup</li>
-        <li>Offline web applications</li>
-        <li>Improved forms</li>
-        <li>Mobile support</li>
-        <li>Improved performance</li>
-    </ol>
-    </article>
+    <footer>
+        <p>Copyright © 2024</p>
+    </footer>
 
-    <aside>
-    <h2 style="color: greenyellow;">Fun Facts</h2>
-    <audio controls>
-        <source src="https://hn-audioblogs.s3-us-west-2.amazonaws.com/ckmx0d7q30346c1s125iydcsa" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <br>
-    <br>
-    <iframe width="420" height="315"
-    src="https://www.youtube.com/embed/ok-plXXHlWw">
-    </iframe>
-    <hr>
-    <br>
-    <form style="color: black;"> 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message"></textarea><br>
-        <button type="submit">Submit</button>
-    </form>
-    </aside>
 </body>
-
-<footer  style="color: black;">
-    <p>Copyright © 2024</p>
-</footer>
 
 </html>
