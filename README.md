@@ -1,5 +1,7 @@
 ## web3400 Dev Container
 
+## Emma Johnson
+
 LAMP Development Stack with phpMyAdmin and Composer preinstalled.
 
 System Prerequisites: You must have Visual Studio Code and Docker Desktop installed on your computer
