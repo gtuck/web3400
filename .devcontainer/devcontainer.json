@@ -4,33 +4,54 @@
 
 	// Specifies the Docker Compose file to be used.
 	"dockerComposeFile": "docker-compose.yml",
-	
-	// Defines the service within the Docker Compose that will be used as the primary application.
+
+	// The service within the Docker Compose file used as the primary application.
 	"service": "app",
-	
+
 	// Sets the workspace folder inside the container.
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-	
-	// List of ports to forward from the container to the host machine.
+
+	// Ports forwarded from the container to your machine.
+	// 8000  - your PHP dev server (you start this yourself; see README)
+	// 3306  - MariaDB, for external database tools
+	// "phpmyadmin:80" - forwards the phpMyAdmin service directly, so it
+	//                   works in both local Docker and GitHub Codespaces.
 	"forwardPorts": [
-		8000, // HTTP port, used for web traffic.
-		3306, // MySQL/MariaDB port, used for database connections.
-		8080 // Custom port, for phpMyAdmin.
+		8000,
+		3306,
+		"phpmyadmin:80"
 	],
-	
-	// This section is reserved for additional features but is currently empty.
-	"features": {
-	},
-	
-	// Customizations specific to the development environment.
-	"customizations": {
-		"vscode": { // Specifies customizations for Visual Studio Code.
-			"extensions": [ // List of VS Code extensions to be installed in the environment.
-				"ms-azuretools.vscode-docker" //Docker extension for VS Code, helpful for managing Docker containers.
-			]
+
+	// Labels shown in the VS Code "Ports" panel.
+	"portsAttributes": {
+		"8000": {
+			"label": "Your PHP server",
+			"onAutoForward": "notify"
+		},
+		"3306": {
+			"label": "MariaDB"
+		},
+		"phpmyadmin:80": {
+			"label": "phpMyAdmin"
 		}
 	},
-	
-	// Command to run after the container is created, starts a PHP server on port 80.
-	"postCreateCommand": "php -S 0.0.0.0:8000"
+
+	// Customizations specific to the development environment.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				// PHP IntelliSense, error checking, go-to-definition.
+				"bmewburn.vscode-intelephense-client",
+				// Step debugging with Xdebug (already installed in the base image).
+				"xdebug.php-debug",
+				// Docker extension, helpful for managing containers.
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	}
+
+	// NOTE: There is intentionally no postCreateCommand starting a PHP server.
+	// You start your own server from your assignment or project folder:
+	//   Assignments:      php -S 0.0.0.0:8000
+	//   Projects (MVC):   php -S 0.0.0.0:8000 -t public
 }
